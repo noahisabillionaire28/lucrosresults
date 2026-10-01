@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-cream font-sans font-medium text-[16px] text-body antialiased; }
+  h1, h2, h3 { @apply font-medium tracking-[-0.06em] text-black; }
+}
+
+@layer components {
+  .field { @apply w-full rounded-lg border-0 bg-white p-[15px] text-[15px] text-black outline-none placeholder:text-black/40 focus-visible:ring-2 focus-visible:ring-black/20; }
+}
+
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee-track { animation: marquee 40s linear infinite; will-change: transform; }
