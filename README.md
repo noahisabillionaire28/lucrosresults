@@ -1,0 +1,39 @@
+# Lucros Results — marketing site
+
+Next.js 14 (App Router) · Tailwind CSS · Framer Motion · deploys on Vercel.
+
+## Run
+```bash
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build (must pass before deploy)
+```
+
+## Where every placeholder / TODO lives
+Search the repo for `TODO` to find them all. Main ones:
+
+| What | Where |
+|---|---|
+| Address, phone, email, domain, tagline, founder, calendar link, map embed, video embeds, founder photo | `site.config.ts` (single source; feeds footer + JSON-LD) |
+| Email capture → CRM/email provider (currently redirects to `/thank-you`) | `components/EmailCaptureForm.tsx` |
+| Application form submit (currently shows a thanks message only) | `components/ApplicationForm.tsx` |
+| Booking calendar link (`Book Strategy Call`) | `site.config.ts` → `calendarLink` |
+| Wistia / YouTube embeds (home, /google, /booked) | `site.config.ts` → `videos` |
+| Google Map embed in footer | `site.config.ts` → `mapEmbedUrl` |
+| Client logos (5 text placeholders) | `components/LogoMarquee.tsx` |
+| Before/After map images (CSS mock grid) | `components/BeforeAfter.tsx` |
+| Founder photo | `site.config.ts` → `founderPhoto` (file in `/public`) |
+| Terms of Service text | `app/terms/page.tsx` |
+| "Areas We Serve" link (phase 2) | `components/Footer.tsx` |
+| FAQ / advantages / process copy | `lib/content.ts` |
+
+JSON-LD omits address/phone until you replace the `[..._PLACEHOLDER]` values.
+
+## Pages
+`/` · `/google` · `/los-angeles` · `/thank-you` (noindex) · `/booked` (noindex) · `/terms` · `/sitemap.xml` · `/robots.txt`
+
+## Deploy to Vercel
+1. Push this repo to GitHub.
+2. vercel.com → Add New Project → import the repo (no settings needed).
+3. Add env var `NEXT_PUBLIC_SITE_URL` = your production URL (sitemap, canonical, JSON-LD).
+4. Deploy, then add your custom domain.
