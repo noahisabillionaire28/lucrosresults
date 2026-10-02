@@ -22,8 +22,11 @@ export const siteConfig = {
   phoneSchema: "+1-818-903-1753", // JSON-LD
   email: "hello@lucrosresults.com", // TODO: real email
 
-  // Booking link. Opens in a new tab. Set Calendly's confirmation redirect to /booked (see README).
+  // Calendly event, embedded inline on /google and /los-angeles. The site redirects to /booked itself
+  // when Calendly reports a booking (see components/CalendlyEmbed.tsx).
   calendarLink: "https://calendly.com/noah-lucrosai/lucros-results-discovery-call",
+  // Where every other "Book Strategy Call" button points (the embedded calendar)
+  bookingPath: "/google#book",
   // Keyless Google Maps embed centered on Porter Ranch, CA
   mapEmbedUrl: "https://www.google.com/maps?q=Porter+Ranch,+CA&z=13&output=embed",
   // TODO: Wistia / YouTube embed URLs (leave "" to keep the placeholder)

@@ -1,5 +1,6 @@
 import { advantages, faqs, steps } from "@/lib/content";
 import { siteConfig } from "@/site.config";
+import { CalendlyEmbed } from "./CalendlyEmbed";
 import { Card } from "./Card";
 import { Chip } from "./Chip";
 import { FAQAccordion } from "./FAQAccordion";
@@ -69,9 +70,14 @@ export function FAQSection({ items = faqs }: { items?: readonly { q: string; a: 
   );
 }
 
-export function BookCallCTA() {
+/**
+ * Book Your Free Strategy Call.
+ * embed = true: renders the inline Calendly widget (used on /google and /los-angeles; anchor id="book").
+ * embed = false: a button that scrolls to the embedded section on /google.
+ */
+export function BookCallCTA({ embed = false }: { embed?: boolean }) {
   return (
-    <SectionWrapper>
+    <SectionWrapper id={embed ? "book" : undefined}>
       <Card className="flex flex-col items-start gap-5 py-12 md:py-20">
         <Chip>Get Started</Chip>
         <SectionHeading>Book Your *Free* Strategy Call</SectionHeading>
@@ -79,7 +85,13 @@ export function BookCallCTA() {
           <p>15 minutes. No pressure, no obligations.</p>
           <p>Worst case, you leave with free advice.</p>
         </div>
-        <PillButton href={siteConfig.calendarLink}>Book Strategy Call</PillButton>
+        {embed ? (
+          <div className="w-full">
+            <CalendlyEmbed />
+          </div>
+        ) : (
+          <PillButton href={siteConfig.bookingPath}>Book Strategy Call</PillButton>
+        )}
       </Card>
     </SectionWrapper>
   );

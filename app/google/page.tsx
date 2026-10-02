@@ -55,7 +55,7 @@ export default function GooglePage() {
 
       <ProcessSection />
       <FAQSection />
-      <BookCallCTA />
+      <BookCallCTA embed />
 
       <SectionWrapper id="apply" reveal={false}>
         <div className="mb-10 flex flex-col items-start gap-5 md:mb-14">

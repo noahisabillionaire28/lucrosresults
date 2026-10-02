@@ -48,7 +48,7 @@ export default function LosAngelesPage() {
       <AdvantageSection />
       <ProcessSection />
       <FAQSection />
-      <BookCallCTA />
+      <BookCallCTA embed />
     </>
   );
 }

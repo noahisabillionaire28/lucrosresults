@@ -14,3 +14,5 @@
 
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .marquee-track { animation: marquee 40s linear infinite; will-change: transform; }
+
+.calendly-inline-widget iframe { width: 100%; height: 100%; border: 0; }

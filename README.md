@@ -17,7 +17,8 @@ Search the repo for `TODO` to find them all. Main ones:
 | Address, phone (display / tel / schema formats), email, domain, tagline, founder, calendar link, map embed, video embeds, founder photo | `site.config.ts` (single source; feeds footer + JSON-LD) |
 | Email capture → CRM/email provider (currently redirects to `/thank-you`) | `components/EmailCaptureForm.tsx` |
 | Application form submit (currently shows a thanks message only) | `components/ApplicationForm.tsx` |
-| Booking calendar link (all "Book Strategy Call" buttons, opens in new tab) | `site.config.ts` → `calendarLink` |
+| Calendly event URL (inline embed on /google and /los-angeles) | `site.config.ts` → `calendarLink` |
+| Where other "Book Strategy Call" buttons point | `site.config.ts` → `bookingPath` (`/google#book`) |
 | Wistia / YouTube embeds (home, /google, /booked) | `site.config.ts` → `videos` |
 | Google Map embed in footer (Porter Ranch, CA) | `site.config.ts` → `mapEmbedUrl` |
 | Client logos (5 text placeholders) | `components/LogoMarquee.tsx` |
@@ -47,10 +48,7 @@ NAP (city-only address, phone) lives in `site.config.ts` and feeds the footer an
 - Validate copy (word count, FAQ count, link rules, meta lengths): `node scripts/check-content.mjs`
 - Pages emit BreadcrumbList + FAQPage JSON-LD (service pages also Service).
 
-## Calendly → /booked redirect (do this once, inside Calendly)
-Calendly decides where people land after booking, not this site. To send them to `/booked`:
-1. Calendly → **Event Types** → open "Lucros Results Discovery Call" → **Edit**.
-2. Open the **Booking page** options → **Confirmation page** (wording varies slightly by plan).
-3. Choose **Redirect to an external site** and enter `https://<your-production-domain>/booked`
-   (currently https://lucrosresults.vercel.app/booked; change it if you add a custom domain).
-4. Save. Redirecting to an external site typically requires a paid Calendly plan.
+## Calendly booking
+- The calendar is embedded inline in the "Book Your Free Strategy Call" section (`id="book"`) on `/google` and `/los-angeles`. Calendly's script loads only on those pages (`components/CalendlyEmbed.tsx`).
+- The site redirects to `/booked` itself when Calendly reports `calendly.event_scheduled`. **Do not** also set a redirect inside Calendly's event settings: it would load `/booked` inside the embed. Leave Calendly's confirmation page on its default.
+- Other "Book Strategy Call" buttons link to `/google#book`.
