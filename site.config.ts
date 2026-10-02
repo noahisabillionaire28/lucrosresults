@@ -27,6 +27,8 @@ export const siteConfig = {
   price: "$1,500",
   nav: [
     { label: "Home", href: "/" },
+    { label: "Services", href: "/services" },
+    { label: "Areas We Serve", href: "/areas" },
     { label: "Los Angeles", href: "/los-angeles" },
     { label: "Apply", href: "/google#apply" },
   ],

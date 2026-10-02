@@ -3,6 +3,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { Reveal } from "@/components/Reveal";
 import { Card } from "@/components/Card";
+import { ExploreLinks } from "@/components/ExploreLinks";
 import { AdvantageSection, BookCallCTA, FAQSection, ProcessSection } from "@/components/sections";
 
 export const metadata: Metadata = {
@@ -43,6 +44,7 @@ export default function LosAngelesPage() {
         </div>
       </SectionWrapper>
 
+      <ExploreLinks />
       <AdvantageSection />
       <ProcessSection />
       <FAQSection />

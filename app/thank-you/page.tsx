@@ -3,7 +3,7 @@ import { Card } from "@/components/Card";
 import { PillButton } from "@/components/PillButton";
 import { SectionWrapper } from "@/components/SectionWrapper";
 
-export const metadata: Metadata = { title: "Thank You | Lucros Results", robots: { index: false, follow: false } };
+export const metadata: Metadata = { title: "Thank You | Lucros Results", description: "Thanks for reaching out to Lucros Results.", robots: { index: false, follow: false } };
 
 export default function ThankYou() {
   return (

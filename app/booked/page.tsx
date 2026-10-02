@@ -3,7 +3,7 @@ import { SectionWrapper } from "@/components/SectionWrapper";
 import { VideoPlaceholder } from "@/components/VideoPlaceholder";
 import { siteConfig } from "@/site.config";
 
-export const metadata: Metadata = { title: "Booked | Lucros Results", robots: { index: false, follow: false } };
+export const metadata: Metadata = { title: "Booked | Lucros Results", description: "Your strategy call with Lucros Results is booked.", robots: { index: false, follow: false } };
 
 export default function Booked() {
   return (

@@ -1,6 +1,7 @@
 "use client";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
+import { RichText } from "./RichText";
 import { Stack } from "./Stack";
 
 export function FAQAccordion({ items }: { items: readonly { q: string; a: string }[] }) {
@@ -20,19 +21,15 @@ export function FAQAccordion({ items }: { items: readonly { q: string; a: string
               <h3 className="text-inherit">{it.q}</h3>
               <motion.span aria-hidden className="text-[28px] leading-none" animate={{ rotate: isOpen ? 45 : 0 }} transition={{ duration: 0.3 }}>+</motion.span>
             </button>
-            <AnimatePresence initial={false}>
-              {isOpen && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="overflow-hidden"
-                >
-                  <p className="px-5 pb-6 text-[16px] leading-relaxed text-body md:px-6">{it.a}</p>
-                </motion.div>
-              )}
-            </AnimatePresence>
+            {/* Always in the DOM (crawlable); collapsed visually + hidden from tab order/AT when closed. */}
+            <motion.div
+              initial={false}
+              animate={isOpen ? { height: "auto", opacity: 1, visibility: "visible" } : { height: 0, opacity: 0, transitionEnd: { visibility: "hidden" } }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="overflow-hidden"
+            >
+              <p className="px-5 pb-6 text-[16px] leading-relaxed text-body md:px-6"><RichText text={it.a} /></p>
+            </motion.div>
           </div>
         );
       })}

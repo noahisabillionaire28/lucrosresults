@@ -37,3 +37,12 @@ JSON-LD omits address/phone until you replace the `[..._PLACEHOLDER]` values.
 2. vercel.com → Add New Project → import the repo (no settings needed).
 3. Add env var `NEXT_PUBLIC_SITE_URL` = your production URL (sitemap, canonical, JSON-LD).
 4. Deploy, then add your custom domain.
+
+## Phase 2 — SEO content
+- Service pages: `lib/content/services/*.ts` → `/services/[slug]` (hub at `/services`)
+- Area pages: `lib/content/areas/*.ts` → `/areas/[slug]` (hub at `/areas`)
+- Each file is plain data (H1, title, description, sections, FAQs). Edit copy there; templates are `components/ContentPage.tsx` / `HubPage.tsx`.
+- In-text links use `[anchor](/path)` markdown inside the strings.
+- Add a page: add the slug to `lib/types.ts`, create the content file, register it in `lib/services.ts` or `lib/areas.ts` (sitemap picks it up automatically).
+- Validate copy (word count, FAQ count, link rules, meta lengths): `node scripts/check-content.mjs`
+- Pages emit BreadcrumbList + FAQPage JSON-LD (service pages also Service).

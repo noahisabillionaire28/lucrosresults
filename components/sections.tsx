@@ -58,13 +58,13 @@ export function ProcessSection() {
   );
 }
 
-export function FAQSection() {
+export function FAQSection({ items = faqs }: { items?: readonly { q: string; a: string }[] }) {
   return (
     <SectionWrapper reveal={false}>
       <div className="mb-10 flex flex-col items-start gap-5 md:mb-14">
         <SectionHeading>Frequently Asked *Questions*</SectionHeading>
       </div>
-      <FAQAccordion items={faqs} />
+      <FAQAccordion items={items} />
     </SectionWrapper>
   );
 }

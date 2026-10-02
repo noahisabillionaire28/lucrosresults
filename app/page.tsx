@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Card } from "@/components/Card";
 import { Chip } from "@/components/Chip";
+import { ExploreLinks } from "@/components/ExploreLinks";
 import { EmailCaptureForm } from "@/components/EmailCaptureForm";
 import { GiftIcon, UsersIcon } from "@/components/icons";
 import { HomeHero } from "@/components/HomeHero";
@@ -48,6 +49,8 @@ export default function Home() {
           </div>
         </Reveal>
       </SectionWrapper>
+
+      <ExploreLinks />
 
       <SectionWrapper>
         <Card className="flex flex-col items-start gap-5 py-12 md:py-20">

@@ -33,8 +33,8 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col gap-3 border-t border-black/10 pt-6 text-[15px] text-body md:flex-row md:items-center md:gap-8">
           <Link href="/terms">Terms</Link>
-          {/* TODO (phase 2): point to the Areas We Serve page once it exists */}
-          <Link href="#">Areas We Serve</Link>
+          <Link href="/services">Services</Link>
+          <Link href="/areas">Areas We Serve</Link>
           <span className="md:ml-auto">© 2026 {siteConfig.name}</span>
         </div>
       </div>
