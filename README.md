@@ -21,7 +21,7 @@ Search the repo for `TODO` to find them all. Main ones:
 | Where other "Book Strategy Call" buttons point | `site.config.ts` → `bookingPath` (`/google#book`) |
 | Wistia / YouTube embeds (home, /google, /booked) | `site.config.ts` → `videos` |
 | Google Map embed in footer (Porter Ranch, CA) | `site.config.ts` → `mapEmbedUrl` |
-| Client logos (5 text placeholders) | `components/LogoMarquee.tsx` |
+| "Working with..." client list + logos | `site.config.ts` → `clients`; logo files in `public/logos/<slug>.<svg/png/webp/jpg>` (see below) |
 | Before/After map images (CSS mock grid) | `components/BeforeAfter.tsx` |
 | Founder photo | `site.config.ts` → `founderPhoto` (file in `/public`) |
 | Terms of Service text | `app/terms/page.tsx` |
@@ -52,3 +52,9 @@ NAP (city-only address, phone) lives in `site.config.ts` and feeds the footer an
 - The calendar is embedded inline in the "Book Your Free Strategy Call" section (`id="book"`) on `/google` and `/los-angeles`. Calendly's script loads only on those pages (`components/CalendlyEmbed.tsx`).
 - The site redirects to `/booked` itself when Calendly reports `calendly.event_scheduled`. **Do not** also set a redirect inside Calendly's event settings: it would load `/booked` inside the embed. Leave Calendly's confirmation page on its default.
 - Other "Book Strategy Call" buttons link to `/google#book`.
+
+## Client logos ("Working with..." strip)
+- Drop a file named after the client slug into `public/logos/` (e.g. `four-brothers-commercial-maintenance.svg`) and redeploy. No code change needed: it replaces the gray text stand-in automatically, shown at a fixed height (24px mobile / 32px desktop), grayscale at 40% opacity.
+- Slugs: `mikes-plaza-cleaners` (in the repo), `four-brothers-commercial-maintenance`, `conquer-credit-management`, `cigar-house`. Accepted types: svg, png, webp, jpg, jpeg, avif.
+- Add or rename a client in `site.config.ts` → `clients`.
+- Best files: SVG or a transparent-background PNG, cropped tight to the logo (extra padding makes it look smaller).

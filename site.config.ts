@@ -35,6 +35,15 @@ export const siteConfig = {
   // TODO: Wistia / YouTube embed URLs (leave "" to keep the placeholder)
   videos: { home: "", google: "", booked: "" },
 
+  // "Working with..." strip. Logo files go in /public/logos/<slug>.<svg|png|webp|jpg|jpeg|avif> (any size/shape,
+  // shown at a fixed height). No file for a slug yet? The company name shows as a gray text stand-in.
+  clients: [
+    { name: "Mike's Plaza Cleaners", slug: "mikes-plaza-cleaners" },
+    { name: "Four Brothers Commercial Maintenance", slug: "four-brothers-commercial-maintenance" },
+    { name: "Conquer Credit Management (CCMI)", slug: "conquer-credit-management" },
+    { name: "Cigar House", slug: "cigar-house" },
+  ],
+
   price: "$1,500",
   nav: [
     { label: "Home", href: "/" },

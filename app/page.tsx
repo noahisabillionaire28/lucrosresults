@@ -6,7 +6,7 @@ import { EmailCaptureForm } from "@/components/EmailCaptureForm";
 import { GiftIcon, UsersIcon } from "@/components/icons";
 import { HomeHero } from "@/components/HomeHero";
 import { LogoMark } from "@/components/Logo";
-import { LogoMarquee } from "@/components/LogoMarquee";
+import { LogoStrip } from "@/components/LogoStrip";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { SectionWrapper } from "@/components/SectionWrapper";
@@ -25,7 +25,7 @@ export default function Home() {
       <HomeHero />
 
       <SectionWrapper className="pt-2 md:pt-2">
-        <LogoMarquee />
+        <LogoStrip />
       </SectionWrapper>
 
       <SectionWrapper reveal={false}>

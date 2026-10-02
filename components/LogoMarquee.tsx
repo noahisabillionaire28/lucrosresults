@@ -1,19 +1,16 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import type { ClientLogo } from "@/lib/clientLogos";
 
 const PX_PER_SECOND = 25;
 
-// TODO: replace these text placeholders with real client logos (grayscale <img>/<svg>).
-const logos = [
-  { t: "LOGO ONE", c: "font-sans tracking-[0.2em]" },
-  { t: "Logo Two", c: "font-serif italic" },
-  { t: "LOGOTHREE", c: "font-sans font-semibold tracking-tight" },
-  { t: "logo four.", c: "font-sans lowercase" },
-  { t: "Logo Five", c: "font-serif" },
-];
-
-/** One row: gray "Working with..." label on the left, logos scrolling to its right (infinite, seamless, never pauses). */
-export function LogoMarquee() {
+/**
+ * One row: gray "Working with..." label (above the logos on mobile), logos scrolling left forever, seamless, never pauses.
+ * Every logo renders at the same height (24px mobile / 32px desktop). Grayscale at 40% opacity.
+ * Clients without a logo file show their name as gray text (see site.config.ts `clients`).
+ */
+export function LogoMarquee({ logos }: { logos: ClientLogo[] }) {
   const groupRef = useRef<HTMLUListElement>(null);
   const [duration, setDuration] = useState(30);
 
@@ -27,11 +24,20 @@ export function LogoMarquee() {
     return () => ro.disconnect();
   }, []);
 
+  // Each half of the track holds the list twice so it is always wider than the visible strip (seamless loop).
   const group = (ref?: React.Ref<HTMLUListElement>, hidden = false) => (
     <ul ref={ref} aria-hidden={hidden} className="flex shrink-0 items-center gap-9 pr-9 md:gap-[110px] md:pr-[110px]">
-      {logos.map((l) => (
-        <li key={l.t} className={`whitespace-nowrap text-[18px] text-black md:text-[28px] opacity-40 grayscale ${l.c}`}>{l.t}</li>
-      ))}
+      {[0, 1].flatMap((copy) =>
+        logos.map((l) => (
+          <li key={`${copy}-${l.name}`} aria-hidden={copy === 1 || undefined} className="flex h-6 shrink-0 items-center opacity-40 grayscale md:h-8">
+            {l.src ? (
+              <Image src={l.src} alt={l.name} width={l.width!} height={l.height!} sizes="160px" className="h-6 w-auto max-w-none md:h-8" />
+            ) : (
+              <span className="whitespace-nowrap text-[17px] font-medium leading-none tracking-[-0.02em] text-black md:text-[22px]">{l.name}</span>
+            )}
+          </li>
+        )),
+      )}
     </ul>
   );
 
