@@ -9,7 +9,7 @@ export const siteConfig = {
   areaServed: "Los Angeles",
   founder: "Noah Fernando",
   founderRole: "Founder",
-  founderPhoto: "/founder.jpg",
+  founderPhoto: "/founder-noah.jpg",
   founderPhotoAlt: "Noah Fernando, Founder of Lucros Results",
 
   // NAP — identical on every page. Service-area business: city only, no street address.

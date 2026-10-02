@@ -31,21 +31,31 @@ export default function Home() {
 
       <SectionWrapper reveal={false}>
         <div className="mb-10 flex flex-col items-start gap-5 md:mb-14">
-          <Reveal><Chip icon={<UsersIcon />}>Our team</Chip></Reveal>
-          <SectionHeading>Meet the Team</SectionHeading>
+          <Reveal><Chip icon={<UsersIcon />}>Our founder</Chip></Reveal>
+          <SectionHeading>Meet the Founder</SectionHeading>
         </div>
         <Reveal>
-          <div className="relative flex aspect-[4/5] w-full items-end overflow-hidden rounded-card bg-card md:aspect-[2/1]">
+          <div className="relative flex aspect-[4/5] w-full items-end overflow-hidden rounded-card bg-card md:aspect-[16/10]">
+            <svg width="0" height="0" className="absolute" aria-hidden focusable="false">
+              <filter id="founder-lift" colorInterpolationFilters="sRGB">
+                <feComponentTransfer>
+                  <feFuncR type="gamma" amplitude="1" exponent="0.72" offset="0" />
+                  <feFuncG type="gamma" amplitude="1" exponent="0.72" offset="0" />
+                  <feFuncB type="gamma" amplitude="1" exponent="0.72" offset="0" />
+                </feComponentTransfer>
+              </filter>
+            </svg>
             {siteConfig.founderPhoto ? (
-              /* Crop: scale up from the top so face + upper body fill the frame and the laptop falls out of view.
-                 Filter: mild brightness/contrast lift for the dark photo (tune the two numbers to taste). */
+              /* Photo is backlit: the face is in shade but the windows are already bright. A gamma curve (see
+                 #founder-lift above) lifts shadows far more than highlights, so the face opens up without
+                 washing out the background. Lower the exponent for a stronger lift. */
               <Image
                 src={siteConfig.founderPhoto}
                 alt={siteConfig.founderPhotoAlt}
                 fill
                 sizes="(min-width:1200px) 1200px, 100vw"
                 quality={85}
-                className="origin-[46%_0%] scale-[1.5] object-cover object-[46%_0%] [filter:brightness(1.3)_contrast(1.12)] md:scale-[1.42]"
+                className="object-cover object-[52%_12%] [filter:url(#founder-lift)]"
               />
             ) : (
               <div className="absolute inset-0 flex items-center justify-center bg-chip text-[18px] text-body">Photo placeholder</div>
