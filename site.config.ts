@@ -9,8 +9,8 @@ export const siteConfig = {
   areaServed: "Los Angeles",
   founder: "Noah Fernando",
   founderRole: "Founder",
-  // TODO: add a photo at /public/noah.jpg and set to "/noah.jpg"
-  founderPhoto: "",
+  founderPhoto: "/founder.jpg",
+  founderPhotoAlt: "Noah Fernando, Founder of Lucros Results",
 
   // NAP — identical on every page. Service-area business: city only, no street address.
   address: "Porter Ranch, CA",

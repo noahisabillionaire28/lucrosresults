@@ -35,11 +35,19 @@ export default function Home() {
           <SectionHeading>Meet the Team</SectionHeading>
         </div>
         <Reveal>
-          <div className="relative flex aspect-[4/5] w-full items-end overflow-hidden rounded-card bg-card md:aspect-[16/9]">
+          <div className="relative flex aspect-[4/5] w-full items-end overflow-hidden rounded-card bg-card md:aspect-[2/1]">
             {siteConfig.founderPhoto ? (
-              <Image src={siteConfig.founderPhoto} alt={siteConfig.founder} fill sizes="(min-width:1200px) 1200px, 100vw" className="object-cover" />
+              /* Crop: scale up from the top so face + upper body fill the frame and the laptop falls out of view.
+                 Filter: mild brightness/contrast lift for the dark photo (tune the two numbers to taste). */
+              <Image
+                src={siteConfig.founderPhoto}
+                alt={siteConfig.founderPhotoAlt}
+                fill
+                sizes="(min-width:1200px) 1200px, 100vw"
+                quality={85}
+                className="origin-[46%_0%] scale-[1.5] object-cover object-[46%_0%] [filter:brightness(1.3)_contrast(1.12)] md:scale-[1.42]"
+              />
             ) : (
-              /* TODO: set founderPhoto in site.config.ts (file in /public) */
               <div className="absolute inset-0 flex items-center justify-center bg-chip text-[18px] text-body">Photo placeholder</div>
             )}
             <div className="relative m-4 rounded-2xl bg-white px-5 py-4 md:m-6">
