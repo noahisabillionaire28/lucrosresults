@@ -29,6 +29,9 @@ export const siteConfig = {
   bookingPath: "/google#book",
   // Keyless Google Maps embed centered on Porter Ranch, CA
   mapEmbedUrl: "https://www.google.com/maps?q=Porter+Ranch,+CA&z=13&output=embed",
+  // TODO: thumbnail image for the video placeholders: drop a 16:9 image in /public and set e.g. "/video-thumb.jpg"
+  videoThumbnail: "",
+  videoDuration: "2:44",
   // TODO: Wistia / YouTube embed URLs (leave "" to keep the placeholder)
   videos: { home: "", google: "", booked: "" },
 

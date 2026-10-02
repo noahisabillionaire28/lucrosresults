@@ -66,7 +66,7 @@ export function ContentPage({ kind, page }: { kind: "service" | "area"; page: Se
       <JsonLd data={faqLd} />
       {serviceLd && <JsonLd data={serviceLd} />}
 
-      <section className="mx-auto w-full max-w-[1200px] px-4 pb-6 pt-10 md:px-6 md:pt-16">
+      <section className="mx-auto w-full max-w-[1100px] px-4 pb-6 pt-10 md:px-6 md:pt-16">
         <Crumbs hubLabel={hub.label} hubHref={hub.href} current={page.name} />
         <h1 className="max-w-[1000px] text-[44px] leading-[1.02] tracking-[-0.06em] text-black md:text-[64px]">{page.h1}</h1>
         <div className="mt-6 max-w-[680px] space-y-3 text-[18px] leading-relaxed text-body">

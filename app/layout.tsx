@@ -7,7 +7,7 @@ import { areas } from "@/lib/areas";
 import { siteConfig } from "@/site.config";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-inter", display: "swap" });
+const inter = Inter({ subsets: ["latin"], style: ["normal", "italic"], variable: "--font-inter", display: "swap" }); // variable font: all weights
 const serif = Source_Serif_4({ subsets: ["latin"], style: ["italic", "normal"], weight: ["400"], variable: "--font-serif", display: "swap" });
 
 export const metadata: Metadata = {
@@ -38,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <MotionConfig reducedMotion="user">
           <Nav />
-          <main className="pt-[68px]">{children}</main>
+          <main className="pt-[69px]">{children}</main>
           <Footer />
         </MotionConfig>
       </body>

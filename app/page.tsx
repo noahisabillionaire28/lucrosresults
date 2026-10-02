@@ -24,8 +24,7 @@ export default function Home() {
     <>
       <HomeHero />
 
-      <SectionWrapper className="py-6 md:py-10">
-        <p className="mb-8 text-center text-[18px] text-body">Working with…</p>
+      <SectionWrapper className="py-4 md:py-6">
         <LogoMarquee />
       </SectionWrapper>
 
@@ -54,7 +53,7 @@ export default function Home() {
                   src={siteConfig.founderPhoto}
                   alt={siteConfig.founderPhotoAlt}
                   fill
-                  sizes="(min-width:1200px) 640px, (min-width:768px) 52vw, 100vw"
+                  sizes="(min-width:1100px) 600px, (min-width:768px) 52vw, 100vw"
                   quality={85}
                   className="object-cover [filter:url(#founder-lift)]"
                 />

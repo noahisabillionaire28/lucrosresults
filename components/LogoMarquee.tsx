@@ -13,6 +13,7 @@ const logos = [
   { t: "Logo Five", c: "font-serif" },
 ];
 
+/** One row: gray "Working with..." label on the left, logos scrolling to its right (infinite, seamless, never pauses). */
 export function LogoMarquee() {
   const groupRef = useRef<HTMLUListElement>(null);
   const [duration, setDuration] = useState(30);
@@ -36,10 +37,13 @@ export function LogoMarquee() {
   );
 
   return (
-    <div className="overflow-hidden" role="region" aria-label="Client logos">
-      <div className="marquee-track flex w-max" style={{ animationDuration: `${duration}s` }}>
-        {group(groupRef)}
-        {group(undefined, true)}
+    <div className="flex items-center gap-5 md:gap-8" role="region" aria-label="Client logos">
+      <p className="shrink-0 text-[16px] leading-tight text-body md:text-[18px]">Working with...</p>
+      <div className="min-w-0 flex-1 overflow-hidden">
+        <div className="marquee-track flex w-max" style={{ animationDuration: `${duration}s` }}>
+          {group(groupRef)}
+          {group(undefined, true)}
+        </div>
       </div>
     </div>
   );
