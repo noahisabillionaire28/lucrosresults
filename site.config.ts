@@ -12,15 +12,20 @@ export const siteConfig = {
   // TODO: add a photo at /public/noah.jpg and set to "/noah.jpg"
   founderPhoto: "",
 
-  // NAP — identical on every page
-  address: "[NAP_ADDRESS_PLACEHOLDER]",
-  phone: "[NAP_PHONE_PLACEHOLDER]",
+  // NAP — identical on every page. Service-area business: city only, no street address.
+  address: "Porter Ranch, CA",
+  addressLocality: "Porter Ranch",
+  addressRegion: "CA",
+  addressCountry: "US",
+  phone: "(818) 903-1753", // display format
+  phoneTel: "+18189031753", // tel: link
+  phoneSchema: "+1-818-903-1753", // JSON-LD
   email: "hello@lucrosresults.com", // TODO: real email
 
-  // TODO: paste your real calendar booking link (Calendly, Cal.com, etc.)
-  calendarLink: "#",
-  // TODO: Google Maps embed URL (Maps > Share > Embed a map > copy the src="...")
-  mapEmbedUrl: "",
+  // Booking link. Opens in a new tab. Set Calendly's confirmation redirect to /booked (see README).
+  calendarLink: "https://calendly.com/noah-lucrosai/lucros-results-discovery-call",
+  // Keyless Google Maps embed centered on Porter Ranch, CA
+  mapEmbedUrl: "https://www.google.com/maps?q=Porter+Ranch,+CA&z=13&output=embed",
   // TODO: Wistia / YouTube embed URLs (leave "" to keep the placeholder)
   videos: { home: "", google: "", booked: "" },
 
@@ -33,5 +38,3 @@ export const siteConfig = {
     { label: "Apply", href: "/google#apply" },
   ],
 } as const;
-
-export const isPlaceholder = (v: string) => v.includes("PLACEHOLDER");

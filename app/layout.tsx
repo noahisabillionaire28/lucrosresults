@@ -3,7 +3,8 @@ import { Inter, Source_Serif_4 } from "next/font/google";
 import { MotionConfig } from "framer-motion";
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
-import { isPlaceholder, siteConfig } from "@/site.config";
+import { areas } from "@/lib/areas";
+import { siteConfig } from "@/site.config";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-inter", display: "swap" });
@@ -17,17 +18,17 @@ export const metadata: Metadata = {
 };
 export const viewport: Viewport = { themeColor: "#EFEBE5" };
 
-// LocalBusiness schema. NAP comes from site.config.ts; unfilled placeholders are omitted so the schema stays valid.
+// LocalBusiness schema. NAP comes from site.config.ts (city-level address only: service-area business).
 const jsonLd: Record<string, unknown> = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: siteConfig.name,
   url: siteConfig.url,
   email: siteConfig.email,
-  areaServed: siteConfig.areaServed,
+  telephone: siteConfig.phoneSchema,
+  address: { "@type": "PostalAddress", addressLocality: siteConfig.addressLocality, addressRegion: siteConfig.addressRegion, addressCountry: siteConfig.addressCountry },
+  areaServed: [siteConfig.areaServed, ...areas.map((a) => a.name)],
   founder: { "@type": "Person", name: siteConfig.founder },
-  ...(isPlaceholder(siteConfig.phone) ? {} : { telephone: siteConfig.phone }),
-  ...(isPlaceholder(siteConfig.address) ? {} : { address: { "@type": "PostalAddress", streetAddress: siteConfig.address, addressLocality: "Los Angeles", addressRegion: "CA", addressCountry: "US" } }),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

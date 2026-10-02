@@ -17,17 +17,10 @@ export function Footer() {
           <address className="not-italic text-[16px] leading-relaxed text-body">
             <p className="text-black">{siteConfig.name}</p>
             <p>Address: {siteConfig.address}</p>
-            <p>Phone: {siteConfig.phone}</p>
+            <p>Phone: <a href={`tel:${siteConfig.phoneTel}`} className="text-black underline decoration-black/30 underline-offset-4">{siteConfig.phone}</a></p>
           </address>
           <div className="aspect-[16/9] w-full overflow-hidden rounded-xl bg-chip md:aspect-[2/1]">
-            {siteConfig.mapEmbedUrl ? (
-              <iframe src={siteConfig.mapEmbedUrl} title="Lucros Results location map" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="h-full w-full border-0" />
-            ) : (
-              <div className="flex h-full items-center justify-center text-[15px] text-body">
-                {/* TODO: set mapEmbedUrl in site.config.ts to show the real Google Map embed here. */}
-                Google Map embed placeholder
-              </div>
-            )}
+            <iframe src={siteConfig.mapEmbedUrl} title="Map of Porter Ranch, CA" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="h-full w-full border-0" />
           </div>
         </div>
 

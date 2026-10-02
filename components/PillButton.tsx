@@ -10,7 +10,7 @@ export function PillButton({ children, href, className = "", ...rest }: Props) {
   if (href) {
     const external = href.startsWith("http");
     return external ? (
-      <a href={href} className={`${cls} ${className}`}>{children}</a>
+      <a href={href} target="_blank" rel="noopener noreferrer" className={`${cls} ${className}`}>{children}</a>
     ) : (
       <Link href={href} className={`${cls} ${className}`}>{children}</Link>
     );

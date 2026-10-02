@@ -79,7 +79,6 @@ export function BookCallCTA() {
           <p>15 minutes. No pressure, no obligations.</p>
           <p>Worst case, you leave with free advice.</p>
         </div>
-        {/* TODO: set calendarLink in site.config.ts */}
         <PillButton href={siteConfig.calendarLink}>Book Strategy Call</PillButton>
       </Card>
     </SectionWrapper>
