@@ -12,7 +12,7 @@ import { siteConfig } from "@/site.config";
 export function VideoPlaceholder({ embedUrl = "", className = "" }: { embedUrl?: string; className?: string }) {
   const [playing, setPlaying] = useState(false);
   return (
-    <div className={`relative aspect-video w-full overflow-hidden rounded-2xl bg-[#141414] ${className}`}>
+    <div className={`relative aspect-video w-full overflow-hidden rounded-xl bg-[#141414] md:rounded-2xl ${className}`}>
       {playing && embedUrl ? (
         <iframe src={`${embedUrl}${embedUrl.includes("?") ? "&" : "?"}autoplay=1`} title="Video" allow="autoplay; fullscreen" allowFullScreen className="absolute inset-0 h-full w-full border-0" />
       ) : (

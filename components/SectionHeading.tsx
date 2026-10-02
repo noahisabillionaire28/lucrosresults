@@ -14,7 +14,7 @@ export function accent(text: string): ReactNode {
   );
 }
 
-const size = "text-[44px] leading-[1.02] tracking-[-0.06em] text-black md:text-[70px]";
+const size = "text-[36px] leading-[1.1] tracking-[-0.06em] text-black md:text-[56px] md:leading-[1.05]";
 
 /** H2 (or H1/H3). Headings with an italic accent get blur(10px)→0 + fade; others use the standard scroll-in. */
 export function SectionHeading({ children, as: Tag = "h2", className = "" }: { children: string; as?: "h1" | "h2" | "h3"; className?: string }) {

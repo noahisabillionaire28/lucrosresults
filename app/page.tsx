@@ -24,7 +24,7 @@ export default function Home() {
     <>
       <HomeHero />
 
-      <SectionWrapper className="py-4 md:py-6">
+      <SectionWrapper className="pt-2 md:pt-2">
         <LogoMarquee />
       </SectionWrapper>
 
@@ -35,8 +35,8 @@ export default function Home() {
         </div>
         <Reveal>
           {/* Photo keeps its natural 5:4 shape (no crop/zoom). Desktop: photo left, name block right. Mobile: stacked. */}
-          <div className="grid gap-3 rounded-card bg-card p-3 md:grid-cols-[1.2fr_1fr] md:gap-4 md:p-4">
-            <div className="relative aspect-[5/4] w-full overflow-hidden rounded-[18px] bg-chip">
+          <div className="grid gap-3 rounded-2xl bg-card p-3 md:grid-cols-[1.2fr_1fr] md:gap-4 md:rounded-card md:p-4">
+            <div className="relative aspect-[5/4] w-full overflow-hidden rounded-xl bg-chip md:rounded-[18px]">
               <svg width="0" height="0" className="absolute" aria-hidden focusable="false">
                 <filter id="founder-lift" colorInterpolationFilters="sRGB">
                   <feComponentTransfer>
@@ -64,7 +64,7 @@ export default function Home() {
             <div className="flex flex-col justify-end gap-3 p-4 md:p-8">
               <p className="text-[36px] leading-none tracking-[-0.06em] text-black md:text-[48px]">{siteConfig.founder}</p>
               <p className="text-[18px] text-body">{siteConfig.founderRole}, {siteConfig.name}</p>
-              <p className="max-w-[360px] text-[16px] leading-relaxed text-body">{siteConfig.tagline}</p>
+              <p className="max-w-[360px] text-[16px] leading-[1.5] text-body md:text-[18px]">{siteConfig.tagline}</p>
             </div>
           </div>
         </Reveal>
@@ -73,11 +73,11 @@ export default function Home() {
       <ExploreLinks />
 
       <SectionWrapper>
-        <Card className="flex flex-col items-start gap-5 py-12 md:py-20">
+        <Card className="flex flex-col items-start gap-5 py-6 md:py-20">
           <LogoMark className="h-14 w-14" />
           <Chip icon={<GiftIcon />}>Free stuff</Chip>
           <SectionHeading>3 Tips to Get *Found First* on Google</SectionHeading>
-          <div className="text-[16px] leading-relaxed text-body">
+          <div className="max-w-[560px] text-[16px] leading-[1.5] text-body md:text-[18px]">
             <p>A free short video showing the first three fixes we make for every client.</p>
             <p>Works for any local business.</p>
             <p>Enter your email for instant access.</p>

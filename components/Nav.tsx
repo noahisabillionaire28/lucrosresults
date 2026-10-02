@@ -13,11 +13,11 @@ export function Nav() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-cream">
-      <div className="mx-auto max-w-[1100px] px-4 md:px-6">
+      <div className="mx-auto max-w-[1100px] px-5 md:px-6">
         <div className="flex h-[68px] items-center justify-between">
           <Logo />
           {/* Desktop: Sign Up pill. Mobile: hamburger (morphs to X, opens the panel below). */}
-          <Link href="/google" className="hidden items-center justify-center rounded-[50px] bg-black px-7 py-3 text-[16px] leading-none text-white shadow-glow md:inline-flex">
+          <Link href="/google" className="hidden items-center justify-center rounded-[50px] bg-black px-7 py-3 text-[16px] leading-none text-white shadow-glow md:inline-flex md:min-h-11">
             Sign Up
           </Link>
           <button
@@ -25,7 +25,7 @@ export function Nav() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((o) => !o)}
-            className="relative flex h-10 w-10 items-center justify-center md:hidden"
+            className="relative flex h-11 w-11 items-center justify-center md:hidden"
           >
             <motion.span className="absolute h-[2px] w-6 rounded bg-black" animate={{ y: open ? 0 : -4, rotate: open ? 45 : 0 }} transition={{ duration: 0.25 }} />
             <motion.span className="absolute h-[2px] w-6 rounded bg-black" animate={{ y: open ? 0 : 4, rotate: open ? -45 : 0 }} transition={{ duration: 0.25 }} />
@@ -44,7 +44,7 @@ export function Nav() {
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="overflow-hidden bg-cream md:hidden"
           >
-            <div className="mx-auto flex max-w-[1100px] flex-col gap-2 px-4 pb-5 pt-2">
+            <div className="mx-auto flex max-w-[1100px] flex-col gap-2 px-5 pb-5 pt-2">
               <nav aria-label="Primary" className="flex flex-col">
                 {siteConfig.nav.map((l) => (
                   <Link key={l.href} href={l.href} className="py-2 text-[18px] tracking-[-0.03em] text-black/70">

@@ -21,7 +21,7 @@ const blocks = [
 export default function LosAngelesPage() {
   return (
     <>
-      <section className="mx-auto w-full max-w-[1100px] px-4 pb-6 pt-10 md:px-6 md:pt-16">
+      <section className="mx-auto w-full max-w-[1100px] px-5 pb-6 pt-10 md:px-6 md:pt-16">
         <h1 className="text-[44px] leading-[1.02] tracking-[-0.06em] text-black md:text-[70px]">Marketing Bureau Los Angeles</h1>
         <div className="mt-6 max-w-[640px] space-y-2 text-[16px] leading-relaxed text-body">
           <p>We help local businesses across Los Angeles rank in Google's top 3 Maps results.</p>

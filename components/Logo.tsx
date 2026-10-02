@@ -12,7 +12,7 @@ export function LogoMark({ className = "h-8 w-8" }: { className?: string }) {
 
 export function Logo() {
   return (
-    <Link href="/" className="flex items-center gap-2.5 text-[20px] tracking-[-0.04em] text-black" aria-label="Lucros Results home">
+    <Link href="/" className="flex min-h-[44px] items-center gap-2.5 text-[20px] tracking-[-0.04em] text-black" aria-label="Lucros Results home">
       <LogoMark />
       Lucros Results
     </Link>

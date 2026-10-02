@@ -21,8 +21,8 @@ export const metadata: Metadata = {
 export default function GooglePage() {
   return (
     <>
-      <section className="mx-auto flex w-full max-w-[1100px] flex-col items-center gap-8 px-4 pb-10 pt-10 text-center md:px-6 md:pt-16">
-        <span className="inline-flex items-center gap-2 rounded-full bg-chip px-4 py-2 text-[16px] text-black/70">
+      <section className="mx-auto flex w-full max-w-[1100px] flex-col items-center gap-8 px-5 pb-10 pt-10 text-center md:px-6 md:pt-16">
+        <span className="inline-flex items-center gap-2 rounded-full bg-chip px-5 py-2 text-[16px] text-black/70">
           <span className="relative flex h-2.5 w-2.5">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#22A559] opacity-75" />
             <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#22A559]" />

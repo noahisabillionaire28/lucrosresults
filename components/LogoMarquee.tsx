@@ -2,7 +2,6 @@
 import { useEffect, useRef, useState } from "react";
 
 const PX_PER_SECOND = 25;
-const GAP = 110;
 
 // TODO: replace these text placeholders with real client logos (grayscale <img>/<svg>).
 const logos = [
@@ -29,16 +28,16 @@ export function LogoMarquee() {
   }, []);
 
   const group = (ref?: React.Ref<HTMLUListElement>, hidden = false) => (
-    <ul ref={ref} aria-hidden={hidden} className="flex shrink-0 items-center" style={{ gap: GAP, paddingRight: GAP }}>
+    <ul ref={ref} aria-hidden={hidden} className="flex shrink-0 items-center gap-9 pr-9 md:gap-[110px] md:pr-[110px]">
       {logos.map((l) => (
-        <li key={l.t} className={`whitespace-nowrap text-[28px] text-black opacity-40 grayscale ${l.c}`}>{l.t}</li>
+        <li key={l.t} className={`whitespace-nowrap text-[18px] text-black md:text-[28px] opacity-40 grayscale ${l.c}`}>{l.t}</li>
       ))}
     </ul>
   );
 
   return (
-    <div className="flex items-center gap-5 md:gap-8" role="region" aria-label="Client logos">
-      <p className="shrink-0 text-[16px] leading-tight text-body md:text-[18px]">Working with...</p>
+    <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-8" role="region" aria-label="Client logos">
+      <p className="shrink-0 text-[14px] leading-tight text-body md:text-[18px]">Working with...</p>
       <div className="min-w-0 flex-1 overflow-hidden">
         <div className="marquee-track flex w-max" style={{ animationDuration: `${duration}s` }}>
           {group(groupRef)}
