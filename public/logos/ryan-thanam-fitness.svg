@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="52 4 300 228" role="img" aria-label="Ryan Thanam Fitness">
+  <title>Ryan Thanam Fitness</title>
+  <g fill="none" stroke="#111111" stroke-linejoin="miter" stroke-linecap="butt">
+    <!-- R -->
+    <path stroke-width="22" d="M71 156V34H120A31 31 0 0 1 120 96H71M112 96L146 156"/>
+    <!-- T: stem + barbell crossbar -->
+    <path stroke-width="22" d="M262 52V156"/>
+    <path stroke-width="14" d="M196 43H328"/>
+  </g>
+  <g fill="#111111">
+    <rect x="180" y="12" width="14" height="62" rx="3"/>
+    <rect x="196" y="22" width="10" height="42" rx="2"/>
+    <rect x="318" y="22" width="10" height="42" rx="2"/>
+    <rect x="330" y="12" width="14" height="62" rx="3"/>
+  </g>
+  <path fill="none" stroke="#111111" stroke-width="6" stroke-linejoin="bevel" stroke-linecap="butt" d="M71.0 222V196H93.0M71.0 209.0H89.0M122.0 196V222M149.0 196H173.0M161.0 196V222M188.0 222V196L212.0 222V196M249.0 196H227.0V222H249.0M227.0 209.0H245.0M288.0 201C286.0 197 281.0 196 278.0 196C270.0 196 266.0 199 266.0 203C266.0 208 278.0 208.0 278.0 209.0C289.0 211.0 290.0 213 290.0 216C290.0 220 285.0 222 278.0 222C274.0 222 269.0 221 267.0 217M327.0 201C325.0 197 320.0 196 317.0 196C309.0 196 305.0 199 305.0 203C305.0 208 317.0 208.0 317.0 209.0C328.0 211.0 329.0 213 329.0 216C329.0 220 324.0 222 317.0 222C313.0 222 308.0 221 306.0 217"/>
+</svg>

@@ -2,6 +2,8 @@
  * Single source of truth for everything you'll swap later.
  * NAP (Name / Address / Phone) here feeds the footer AND the LocalBusiness JSON-LD.
  */
+type Client = { name: string; slug: string; tall?: boolean };
+
 export const siteConfig = {
   name: "Lucros Results",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://lucrosresults.com", // TODO: set real domain
@@ -37,12 +39,15 @@ export const siteConfig = {
 
   // "Working with..." strip. Logo files go in /public/logos/<slug>.<svg|png|webp|jpg|jpeg|avif> (any size/shape,
   // shown at a fixed height). No file for a slug yet? The company name shows as a gray text stand-in.
+  // tall: true shows the logo larger (48px mobile / 64px desktop instead of 24 / 32). Use it for stacked or
+  // emblem-style logos, which look small at the default height. Wide wordmark logos should stay default.
   clients: [
-    { name: "Mike's Plaza Cleaners", slug: "mikes-plaza-cleaners" },
+    { name: "Mike's Plaza Cleaners", slug: "mikes-plaza-cleaners", tall: true },
+    { name: "Ryan Thanam Fitness", slug: "ryan-thanam-fitness", tall: true },
     { name: "Four Brothers Commercial Maintenance", slug: "four-brothers-commercial-maintenance" },
     { name: "Conquer Credit Management (CCMI)", slug: "conquer-credit-management" },
     { name: "Cigar House", slug: "cigar-house" },
-  ],
+  ] as readonly Client[],
 
   price: "$1,500",
   nav: [

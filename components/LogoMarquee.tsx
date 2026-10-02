@@ -7,7 +7,7 @@ const PX_PER_SECOND = 25;
 
 /**
  * One row: gray "Working with..." label (above the logos on mobile), logos scrolling left forever, seamless, never pauses.
- * Every logo renders at the same height (24px mobile / 32px desktop). Grayscale at 40% opacity.
+ * Logos render at 24px mobile / 32px desktop (48 / 64px when the client is marked `tall`). Grayscale at 40% opacity.
  * Clients without a logo file show their name as gray text (see site.config.ts `clients`).
  */
 export function LogoMarquee({ logos }: { logos: ClientLogo[] }) {
@@ -29,9 +29,9 @@ export function LogoMarquee({ logos }: { logos: ClientLogo[] }) {
     <ul ref={ref} aria-hidden={hidden} className="flex shrink-0 items-center gap-9 pr-9 md:gap-[110px] md:pr-[110px]">
       {[0, 1].flatMap((copy) =>
         logos.map((l) => (
-          <li key={`${copy}-${l.name}`} aria-hidden={copy === 1 || undefined} className="flex h-6 shrink-0 items-center opacity-40 grayscale md:h-8">
+          <li key={`${copy}-${l.name}`} aria-hidden={copy === 1 || undefined} className={`flex shrink-0 items-center opacity-40 grayscale ${l.tall && l.src ? "h-12 md:h-16" : "h-6 md:h-8"}`}>
             {l.src ? (
-              <Image src={l.src} alt={l.name} width={l.width!} height={l.height!} sizes="160px" className="h-6 w-auto max-w-none md:h-8" />
+              <Image src={l.src} alt={l.name} width={l.width!} height={l.height!} sizes="160px" className={`w-auto max-w-none ${l.tall ? "h-12 md:h-16" : "h-6 md:h-8"}`} />
             ) : (
               <span className="whitespace-nowrap text-[17px] font-medium leading-none tracking-[-0.02em] text-black md:text-[22px]">{l.name}</span>
             )}
