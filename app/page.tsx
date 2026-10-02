@@ -35,34 +35,37 @@ export default function Home() {
           <SectionHeading>Meet the Founder</SectionHeading>
         </div>
         <Reveal>
-          <div className="relative flex aspect-[4/5] w-full items-end overflow-hidden rounded-card bg-card md:aspect-[16/10]">
-            <svg width="0" height="0" className="absolute" aria-hidden focusable="false">
-              <filter id="founder-lift" colorInterpolationFilters="sRGB">
-                <feComponentTransfer>
-                  <feFuncR type="gamma" amplitude="1" exponent="0.72" offset="0" />
-                  <feFuncG type="gamma" amplitude="1" exponent="0.72" offset="0" />
-                  <feFuncB type="gamma" amplitude="1" exponent="0.72" offset="0" />
-                </feComponentTransfer>
-              </filter>
-            </svg>
-            {siteConfig.founderPhoto ? (
-              /* Photo is backlit: the face is in shade but the windows are already bright. A gamma curve (see
-                 #founder-lift above) lifts shadows far more than highlights, so the face opens up without
-                 washing out the background. Lower the exponent for a stronger lift. */
-              <Image
-                src={siteConfig.founderPhoto}
-                alt={siteConfig.founderPhotoAlt}
-                fill
-                sizes="(min-width:1200px) 1200px, 100vw"
-                quality={85}
-                className="object-cover object-[52%_12%] [filter:url(#founder-lift)]"
-              />
-            ) : (
-              <div className="absolute inset-0 flex items-center justify-center bg-chip text-[18px] text-body">Photo placeholder</div>
-            )}
-            <div className="relative m-4 rounded-2xl bg-white px-5 py-4 md:m-6">
-              <p className="text-[20px] tracking-[-0.04em] text-black">{siteConfig.founder}</p>
-              <p className="text-[16px] text-body">{siteConfig.founderRole}</p>
+          {/* Photo keeps its natural 5:4 shape (no crop/zoom). Desktop: photo left, name block right. Mobile: stacked. */}
+          <div className="grid gap-3 rounded-card bg-card p-3 md:grid-cols-[1.2fr_1fr] md:gap-4 md:p-4">
+            <div className="relative aspect-[5/4] w-full overflow-hidden rounded-[18px] bg-chip">
+              <svg width="0" height="0" className="absolute" aria-hidden focusable="false">
+                <filter id="founder-lift" colorInterpolationFilters="sRGB">
+                  <feComponentTransfer>
+                    <feFuncR type="gamma" amplitude="1" exponent="0.72" offset="0" />
+                    <feFuncG type="gamma" amplitude="1" exponent="0.72" offset="0" />
+                    <feFuncB type="gamma" amplitude="1" exponent="0.72" offset="0" />
+                  </feComponentTransfer>
+                </filter>
+              </svg>
+              {siteConfig.founderPhoto ? (
+                /* Backlit photo: the gamma curve above lifts the shaded face without washing out the bright windows.
+                   Lower the exponent for a stronger lift. */
+                <Image
+                  src={siteConfig.founderPhoto}
+                  alt={siteConfig.founderPhotoAlt}
+                  fill
+                  sizes="(min-width:1200px) 640px, (min-width:768px) 52vw, 100vw"
+                  quality={85}
+                  className="object-cover [filter:url(#founder-lift)]"
+                />
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center text-[18px] text-body">Photo placeholder</div>
+              )}
+            </div>
+            <div className="flex flex-col justify-end gap-3 p-4 md:p-8">
+              <p className="text-[36px] leading-none tracking-[-0.06em] text-black md:text-[48px]">{siteConfig.founder}</p>
+              <p className="text-[18px] text-body">{siteConfig.founderRole}, {siteConfig.name}</p>
+              <p className="max-w-[360px] text-[16px] leading-relaxed text-body">{siteConfig.tagline}</p>
             </div>
           </div>
         </Reveal>
