@@ -44,6 +44,7 @@ export const siteConfig = {
   clients: [
     { name: "Mike's Plaza Cleaners", slug: "mikes-plaza-cleaners", tall: true },
     { name: "Ryan Thanam Fitness", slug: "ryan-thanam-fitness", tall: true },
+    { name: "Veloce Luxury Rentals", slug: "veloce-luxury-rentals", tall: true },
     { name: "Four Brothers Commercial Maintenance", slug: "four-brothers-commercial-maintenance" },
     { name: "Conquer Credit Management (CCMI)", slug: "conquer-credit-management" },
     { name: "Cigar House", slug: "cigar-house" },
