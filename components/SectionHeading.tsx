@@ -7,9 +7,16 @@ import { Reveal, scrollSpring } from "./Reveal";
 export function accent(text: string): ReactNode {
   return text.split(/(\*[^*]+\*)/g).map((part, i) =>
     part.startsWith("*") ? (
-      <em key={i} className="font-serif font-normal italic">{part.slice(1, -1)}</em>
+      <em key={i} className="whitespace-nowrap font-serif font-normal italic">{part.slice(1, -1)}</em>
     ) : (
-      <Fragment key={i}>{part}</Fragment>
+      <Fragment key={i}>
+        {part.split("\n").map((seg, j) => (
+          <Fragment key={j}>
+            {j > 0 && <br className="hidden md:block" />}
+            {seg}
+          </Fragment>
+        ))}
+      </Fragment>
     ),
   );
 }
