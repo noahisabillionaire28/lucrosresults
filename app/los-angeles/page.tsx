@@ -1,3 +1,4 @@
+import { siteConfig } from "@/site.config";
 import type { Metadata } from "next";
 import { SectionHeading } from "@/components/SectionHeading";
 import { SectionWrapper } from "@/components/SectionWrapper";
@@ -6,10 +7,24 @@ import { Card } from "@/components/Card";
 import { ExploreLinks } from "@/components/ExploreLinks";
 import { AdvantageSection, BookCallCTA, FAQSection, ProcessSection } from "@/components/sections";
 
+const title = "BEST Marketing Agency Los Angeles | Lucros Results";
+const description = "Lucros Results helps companies like yours rank higher and get more clients using Google Ads and Meta Ads.";
+
 export const metadata: Metadata = {
-  title: "Marketing Agency Los Angeles | Rank in Google's Top 3 | Lucros Results",
-  description: "Los Angeles marketing agency helping local businesses rank in Google's top 3 and generate more leads.",
+  title,
+  description,
   alternates: { canonical: "/los-angeles" },
+  // Page-level openGraph replaces the layout's, so it is spelled out in full. og-image.png is 1200x630 (logo on cream).
+  openGraph: {
+    title,
+    description,
+    url: "/los-angeles",
+    siteName: siteConfig.name,
+    type: "website",
+    locale: "en_US",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Lucros Results" }],
+  },
+  twitter: { card: "summary_large_image", title, description, images: ["/og-image.png"] },
 };
 
 const blocks = [
