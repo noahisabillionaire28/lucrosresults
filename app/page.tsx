@@ -24,7 +24,7 @@ export default function Home() {
     <>
       <HomeHero />
 
-      <SectionWrapper className="pt-2 md:pt-2">
+      <SectionWrapper className="pt-16 md:pt-16 lg:pt-[110px]">
         <LogoStrip />
       </SectionWrapper>
 

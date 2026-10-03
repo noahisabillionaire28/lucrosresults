@@ -4,7 +4,7 @@ import { LogoMark } from "./Logo";
 
 export function Footer() {
   return (
-    <footer className="mx-auto w-full max-w-[1100px] px-5 pb-10 pt-10 md:px-6 md:pt-[70px]">
+    <footer className="mx-auto w-full max-w-[1200px] px-6 pb-10 pt-10 md:px-10 lg:px-16 md:pt-[70px]">
       <div className="rounded-card bg-card p-6 md:p-12">
         <div className="flex items-center gap-2.5 text-[20px] tracking-[-0.04em]">
           <LogoMark /> {siteConfig.name}

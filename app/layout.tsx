@@ -38,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <MotionConfig reducedMotion="user">
           <Nav />
-          <main className="pt-[69px]">{children}</main>
+          <main className="pt-[77px] md:pt-[85px]">{children}</main>
           <Footer />
         </MotionConfig>
       </body>

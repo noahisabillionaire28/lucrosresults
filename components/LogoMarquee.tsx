@@ -26,12 +26,12 @@ export function LogoMarquee({ logos }: { logos: ClientLogo[] }) {
 
   // Each half of the track holds the list twice so it is always wider than the visible strip (seamless loop).
   const group = (ref?: React.Ref<HTMLUListElement>, hidden = false) => (
-    <ul ref={ref} aria-hidden={hidden} className="flex shrink-0 items-center gap-9 pr-9 md:gap-[110px] md:pr-[110px]">
+    <ul ref={ref} aria-hidden={hidden} className="flex shrink-0 items-center gap-14 pr-14 md:gap-[110px] md:pr-[110px]">
       {[0, 1].flatMap((copy) =>
         logos.map((l) => (
-          <li key={`${copy}-${l.name}`} aria-hidden={copy === 1 || undefined} className={`flex shrink-0 items-center opacity-40 grayscale ${l.tall && l.src ? "h-12 md:h-16" : "h-6 md:h-8"}`}>
+          <li key={`${copy}-${l.name}`} aria-hidden={copy === 1 || undefined} className={`flex shrink-0 items-center opacity-40 grayscale ${l.tall && l.src ? "h-9 md:h-16" : "h-7 md:h-10"}`}>
             {l.src ? (
-              <Image src={l.src} alt={l.name} width={l.width!} height={l.height!} sizes="160px" className={`w-auto max-w-none ${l.tall ? "h-12 md:h-16" : "h-6 md:h-8"}`} />
+              <Image src={l.src} alt={l.name} width={l.width!} height={l.height!} sizes="160px" className={`w-auto max-w-none ${l.tall ? "h-9 md:h-16" : "h-7 md:h-10"}`} />
             ) : (
               <span className="whitespace-nowrap text-[17px] font-medium leading-none tracking-[-0.02em] text-black md:text-[22px]">{l.name}</span>
             )}
@@ -42,8 +42,8 @@ export function LogoMarquee({ logos }: { logos: ClientLogo[] }) {
   );
 
   return (
-    <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-8" role="region" aria-label="Client logos">
-      <p className="shrink-0 text-[14px] leading-tight text-body md:text-[18px]">Working with...</p>
+    <div className="flex flex-col gap-4 md:flex-row md:items-center md:gap-[110px]" role="region" aria-label="Client logos">
+      <p className="shrink-0 text-[15px] leading-tight text-body md:text-[14px] md:tracking-[-0.04em]">Working with...</p>
       <div className="min-w-0 flex-1 overflow-hidden">
         <div className="marquee-track flex w-max" style={{ animationDuration: `${duration}s` }}>
           {group(groupRef)}

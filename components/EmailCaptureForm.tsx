@@ -17,7 +17,7 @@ export function EmailCaptureForm({ buttonLabel, className = "", variant = "pill"
 
   const rect = variant === "rect";
   return (
-    <form onSubmit={onSubmit} className={`flex w-full flex-col ${rect ? "gap-[10px] sm:flex-row sm:gap-2" : "gap-3 sm:flex-row"} ${className}`}>
+    <form onSubmit={onSubmit} className={`flex w-full flex-col ${rect ? "gap-[10px] sm:flex-row" : "gap-3 sm:flex-row"} ${className}`}>
       <label htmlFor={id} className="sr-only">Email address</label>
       <input
         id={id}
@@ -26,10 +26,10 @@ export function EmailCaptureForm({ buttonLabel, className = "", variant = "pill"
         placeholder="Enter your email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className={rect ? "field h-12 w-full !rounded-md !py-0 !text-[16px] sm:w-[400px]" : "field h-12 w-full !py-0 !text-[16px] sm:flex-1"}
+        className={rect ? "field h-[46px] w-full !rounded-md !py-0 !text-[16px] sm:w-[300px] lg:h-[50px] lg:w-[241px]" : "field h-12 w-full !py-0 !text-[16px] sm:flex-1"}
       />
       {rect ? (
-        <button type="submit" className="h-12 w-full rounded-md bg-black px-7 text-[16px] leading-none text-white sm:w-auto">{buttonLabel}</button>
+        <button type="submit" className="h-[46px] w-full rounded-md bg-black px-7 text-[16px] leading-none text-white sm:w-auto lg:h-[50px] lg:w-[101px] lg:px-0">{buttonLabel}</button>
       ) : (
         <PillButton type="submit">{buttonLabel}</PillButton>
       )}
