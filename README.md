@@ -55,7 +55,7 @@ NAP (city-only address, phone) lives in `site.config.ts` and feeds the footer an
 
 ## Client logos ("Working with..." strip)
 - Drop a file named after the client slug into `public/logos/` (e.g. `four-brothers-commercial-maintenance.svg`) and redeploy. No code change needed: it replaces the gray text stand-in automatically, shown at a fixed height (24px mobile / 32px desktop), grayscale at 40% opacity.
-- Slugs: `mikes-plaza-cleaners`, `ryan-thanam-fitness`, `veloce-luxury-rentals`, `four-brothers-commercial-maintenance`, `brya` and `the-cactus-doctor` (in the repo), `four-brothers-commercial-maintenance`, `conquer-credit-management`, `cigar-house`. Accepted types: svg, png, webp, jpg, jpeg, avif.
+- Current logos (all in the repo): `mikes-plaza-cleaners`, `ryan-thanam-fitness`, `veloce-luxury-rentals`, `four-brothers-commercial-maintenance`, `brya`, `the-cactus-doctor`. Accepted types: svg, png, webp, jpg, jpeg, avif. A client without a file shows its name as gray text until you add one.
 - Add or rename a client in `site.config.ts` → `clients`.
 - Best files: SVG or a transparent-background PNG, cropped tight to the logo (extra padding makes it look smaller).
 - Logo too small? Stacked/emblem logos can set `tall: true` on their entry in `site.config.ts` (48px mobile / 64px desktop).
