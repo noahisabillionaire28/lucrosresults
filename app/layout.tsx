@@ -12,7 +12,7 @@ const serif = Source_Serif_4({ subsets: ["latin"], style: ["italic", "normal"], 
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: "Lucros Results | Local Marketing Bureau in Los Angeles",
+  title: "Lucros Results | Local Marketing Agency in Los Angeles",
   description: "Marketing for local businesses in Los Angeles. Top 3 on Google Maps in 90 days — guaranteed.",
   openGraph: { siteName: siteConfig.name, type: "website", locale: "en_US" },
 };

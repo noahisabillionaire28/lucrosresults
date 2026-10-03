@@ -14,8 +14,8 @@ import { siteConfig } from "@/site.config";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "BEST Marketing Bureau Los Angeles - Lucros Results | Local SEO, Google Rankings & Lead Generation for Local Businesses Near Me",
-  description: "Lucros Results helps companies like yours rank higher and get more clients using Google Ads and Meta Ads. Los Angeles marketing bureau.",
+  title: "BEST Marketing Agency Los Angeles - Lucros Results | Local SEO, Google Rankings & Lead Generation for Local Businesses Near Me",
+  description: "Lucros Results helps companies like yours rank higher and get more clients using Google Ads and Meta Ads. Los Angeles marketing agency.",
   alternates: { canonical: "/" },
 };
 

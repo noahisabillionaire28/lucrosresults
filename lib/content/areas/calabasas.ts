@@ -3,12 +3,12 @@ import type { AreaPage } from "@/lib/types";
 const page: AreaPage = {
   slug: "calabasas",
   name: "Calabasas",
-  h1: "Marketing Bureau Calabasas",
-  title: "Marketing Bureau Calabasas | Lucros Results",
-  description: "Marketing bureau in Calabasas for local businesses. We aim to get you into Google's top 3 Maps results in 90 days, guaranteed. One flat fee, no contracts.",
+  h1: "Marketing Agency Calabasas",
+  title: "Marketing Agency Calabasas | Lucros Results",
+  description: "Marketing agency in Calabasas for local businesses. We aim to get you into Google's top 3 Maps results in 90 days, guaranteed. One flat fee, no contracts.",
   short: "We help Calabasas businesses reach Google's top 3 Maps results in 90 days, with a full refund if we miss.",
   intro: [
-    "If you run a business in Calabasas, most new customers find you the same way. They search on their phone and tap one of the first three businesses on the map. Lucros Results is a marketing bureau for local businesses in Los Angeles. We work to get Calabasas businesses into Google's top 3 Maps results in 90 days, guaranteed, or you get a full refund.",
+    "If you run a business in Calabasas, most new customers find you the same way. They search on their phone and tap one of the first three businesses on the map. Lucros Results is a marketing agency for local businesses in Los Angeles. We work to get Calabasas businesses into Google's top 3 Maps results in 90 days, guaranteed, or you get a full refund.",
     "The fee is one flat $1,500, paid once. There are no contracts. This page explains how local search works in Calabasas and what happens when you work with us."
   ],
   sections: [

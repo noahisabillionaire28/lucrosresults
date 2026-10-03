@@ -9,7 +9,7 @@ const page: ServicePage = {
   short: "We get Los Angeles businesses into Google's top 3 Maps results in 90 days, or you get a full refund.",
   intro: [
     "Local SEO is the work that makes your business show up when people near you search on Google. Think \"dentist near me\" or \"plumber in Los Angeles.\" The most valuable spot is the map pack, the three listings Google shows above everything else.",
-    "Lucros Results is a marketing bureau for local businesses in Los Angeles. We aim to put you in that top 3 within 90 days. If we miss, you get a full refund. The fee is a flat $1,500, one time, with no contract.",
+    "Lucros Results is a marketing agency for local businesses in Los Angeles. We aim to put you in that top 3 within 90 days. If we miss, you get a full refund. The fee is a flat $1,500, one time, with no contract.",
   ],
   sections: [
     {

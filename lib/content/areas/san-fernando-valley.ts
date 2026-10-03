@@ -3,12 +3,12 @@ import type { AreaPage } from "@/lib/types";
 const page: AreaPage = {
   slug: "san-fernando-valley",
   name: "San Fernando Valley",
-  h1: "Marketing Bureau San Fernando Valley",
-  title: "Marketing Bureau San Fernando Valley | Lucros Results",
-  description: "Marketing Bureau San Fernando Valley: we get local businesses into Google's top 3 Maps results in 90 days, guaranteed, for one flat $1,500 fee.",
+  h1: "Marketing Agency San Fernando Valley",
+  title: "Marketing Agency San Fernando Valley | Lucros Results",
+  description: "Marketing Agency San Fernando Valley: we get local businesses into Google's top 3 Maps results in 90 days, guaranteed, for one flat $1,500 fee.",
   short: "We help Valley businesses reach Google's top 3 Maps results in 90 days, guaranteed, with no contracts.",
   intro: [
-    "Lucros Results is a marketing bureau for local businesses in Los Angeles, including businesses across the San Fernando Valley. Our main offer is simple: we get your business into Google's top 3 Maps results in 90 days, or you get a full refund. The fee is a flat $1,500, one time, with no contract.",
+    "Lucros Results is a marketing agency for local businesses in Los Angeles, including businesses across the San Fernando Valley. Our main offer is simple: we get your business into Google's top 3 Maps results in 90 days, or you get a full refund. The fee is a flat $1,500, one time, with no contract.",
     "The Valley is big, and customers here search from the car, the couch and the office. If your business does not show up in the map pack when they look, they call someone else. We fix that.",
   ],
   sections: [

@@ -3,12 +3,12 @@ import type { AreaPage } from "@/lib/types";
 const page: AreaPage = {
   slug: "northridge",
   name: "Northridge",
-  h1: "Marketing Bureau Northridge",
-  title: "Marketing Bureau Northridge | Lucros Results",
-  description: "Marketing Bureau Northridge: Lucros Results gets local businesses into Google's top 3 Maps results in 90 days. Flat $1,500 fee, no contracts, refund if we miss.",
+  h1: "Marketing Agency Northridge",
+  title: "Marketing Agency Northridge | Lucros Results",
+  description: "Marketing Agency Northridge: Lucros Results gets local businesses into Google's top 3 Maps results in 90 days. Flat $1,500 fee, no contracts, refund if we miss.",
   short: "We help Northridge businesses show up in Google's top 3 Maps results, with weekly updates and no contracts.",
   intro: [
-    "Lucros Results is a marketing bureau for local businesses in Los Angeles. In Northridge, our main job is simple: get your business into Google's top 3 Maps results within 90 days. If we miss, you get a full refund.",
+    "Lucros Results is a marketing agency for local businesses in Los Angeles. In Northridge, our main job is simple: get your business into Google's top 3 Maps results within 90 days. If we miss, you get a full refund.",
     "The fee is one flat $1,500, paid once, with no contract. We work with local businesses across the area, from restaurants and repair shops to medical offices and law firms.",
   ],
   sections: [

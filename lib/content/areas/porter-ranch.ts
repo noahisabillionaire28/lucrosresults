@@ -3,12 +3,12 @@ import type { AreaPage } from "@/lib/types";
 const page: AreaPage = {
   slug: "porter-ranch",
   name: "Porter Ranch",
-  h1: "Marketing Bureau Porter Ranch",
-  title: "Marketing Bureau Porter Ranch | Lucros Results",
-  description: "Marketing Bureau Porter Ranch: Lucros Results gets local businesses into Google's top 3 Maps results in 90 days, guaranteed, for a flat $1,500. No contracts.",
+  h1: "Marketing Agency Porter Ranch",
+  title: "Marketing Agency Porter Ranch | Lucros Results",
+  description: "Marketing Agency Porter Ranch: Lucros Results gets local businesses into Google's top 3 Maps results in 90 days, guaranteed, for a flat $1,500. No contracts.",
   short: "We help Porter Ranch businesses reach Google's top 3 Maps results in 90 days, with a full refund if we miss.",
   intro: [
-    "Lucros Results is a marketing bureau for local businesses across Los Angeles, including Porter Ranch. Our core offer is simple. We get your business into Google's top 3 Maps results in 90 days, or you get a full refund. The fee is a flat $1,500, one time, with no contract.",
+    "Lucros Results is a marketing agency for local businesses across Los Angeles, including Porter Ranch. Our core offer is simple. We get your business into Google's top 3 Maps results in 90 days, or you get a full refund. The fee is a flat $1,500, one time, with no contract.",
     "If you run a dental office, salon, restaurant, law office or home service company here, most of your new customers start with a search on their phone.",
   ],
   sections: [

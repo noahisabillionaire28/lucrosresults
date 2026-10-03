@@ -7,8 +7,8 @@ import { ExploreLinks } from "@/components/ExploreLinks";
 import { AdvantageSection, BookCallCTA, FAQSection, ProcessSection } from "@/components/sections";
 
 export const metadata: Metadata = {
-  title: "Marketing Bureau Los Angeles | Rank in Google's Top 3 | Lucros Results",
-  description: "Los Angeles marketing bureau helping local businesses rank in Google's top 3 and generate more leads.",
+  title: "Marketing Agency Los Angeles | Rank in Google's Top 3 | Lucros Results",
+  description: "Los Angeles marketing agency helping local businesses rank in Google's top 3 and generate more leads.",
   alternates: { canonical: "/los-angeles" },
 };
 
@@ -22,7 +22,7 @@ export default function LosAngelesPage() {
   return (
     <>
       <section className="mx-auto w-full max-w-[1100px] px-5 pb-6 pt-10 md:px-6 md:pt-16">
-        <h1 className="text-[44px] leading-[1.02] tracking-[-0.06em] text-black md:text-[70px]">Marketing Bureau Los Angeles</h1>
+        <h1 className="text-[44px] leading-[1.02] tracking-[-0.06em] text-black md:text-[70px]">Marketing Agency Los Angeles</h1>
         <div className="mt-6 max-w-[640px] space-y-2 text-[16px] leading-relaxed text-body">
           <p>We help local businesses across Los Angeles rank in Google's top 3 Maps results.</p>
           <p>Guaranteed in 90 days, or you get a full refund.</p>

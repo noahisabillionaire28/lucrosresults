@@ -3,12 +3,12 @@ import type { AreaPage } from "@/lib/types";
 const page: AreaPage = {
   slug: "woodland-hills",
   name: "Woodland Hills",
-  h1: "Marketing Bureau Woodland Hills",
-  title: "Marketing Bureau Woodland Hills | Lucros Results",
-  description: "Marketing bureau for Woodland Hills businesses. We get you into Google's top 3 Maps results in 90 days for a flat $1,500, or you get a full refund.",
+  h1: "Marketing Agency Woodland Hills",
+  title: "Marketing Agency Woodland Hills | Lucros Results",
+  description: "Marketing agency for Woodland Hills businesses. We get you into Google's top 3 Maps results in 90 days for a flat $1,500, or you get a full refund.",
   short: "We help Woodland Hills businesses show up in Google's top 3 Maps results within 90 days, guaranteed.",
   intro: [
-    "Lucros Results is a marketing bureau that works with local businesses across Los Angeles, including Woodland Hills. Our main job is simple. We get your business into Google's top 3 Maps results within 90 days. If we miss, you get a full refund.",
+    "Lucros Results is a marketing agency that works with local businesses across Los Angeles, including Woodland Hills. Our main job is simple. We get your business into Google's top 3 Maps results within 90 days. If we miss, you get a full refund.",
     "The fee is a flat $1,500, paid once. There is no contract. If you run a practice, shop, restaurant or service company in Woodland Hills, this page explains how local search works here and what we do about it."
   ],
   sections: [
