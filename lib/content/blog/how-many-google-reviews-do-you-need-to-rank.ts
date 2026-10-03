@@ -1,0 +1,45 @@
+import type { BlogPost } from "@/lib/types";
+
+const post: BlogPost = {
+  slug: "how-many-google-reviews-do-you-need-to-rank",
+  title: "How Many Google Reviews Do You Need to Rank in the Map Pack?",
+  metaTitle: "How Many Google Reviews Do You Need to Rank? | Lucros Results",
+  description:
+    "How many Google reviews do you need to rank? There is no magic number. Learn what really matters and how to benchmark against your top three local competitors.",
+  date: "2026-10-03",
+  body: [
+    "Every business owner asks us the same thing: how many Google reviews do I need to show up in the map pack? We wish there were a clean answer. There isn't one.",
+    "Anyone who gives you a fixed number is guessing. Google has never published a review count that unlocks a top spot, and what works in one neighborhood can fall flat in the next.",
+    "What you can do is measure yourself against the businesses you actually compete with. This post shows you how, and which parts of your reviews matter beyond the raw total.",
+    "## Why there is no magic number",
+    "Google says local results are based on three things: **relevance**, **distance** and **prominence**. Reviews feed into prominence, which is Google's sense of how well known and trusted a business is.",
+    "But prominence is relative. A dentist in a crowded part of Woodland Hills faces very different competition than a locksmith in a quiet corner of the Valley.",
+    "So the better question is not how many reviews you need. It is how your reviews compare to the businesses Google is already showing for your search.",
+    "## Compare yourself to the map pack, not to the internet",
+    "The map pack is the group of three local businesses that appears with a map at the top of many searches. Those three are your real benchmark.",
+    "A business with a huge pile of old reviews can still lose to one with fewer, fresher and more detailed ones. Volume is only one signal, and it never works alone.",
+    "Think of it like a race. You don't need to beat a world record. You need to beat the three people running next to you.",
+    "## What matters besides the total",
+    "Once you stop chasing a number, you can focus on the things that actually build trust with Google and with customers.",
+    "- **Quality:** Detailed reviews that describe a real job tell a better story than a one-line \"great!\" Specific reviews also help the next customer decide.\n- **Recency:** A steady stream of recent reviews shows you are active today, not just years ago.\n- **Natural keywords:** When customers mention the service and the area in their own words, that supports relevance. Never script this. It should happen on its own.\n- **Steady flow:** A consistent trickle looks healthier than a burst followed by months of silence.\n- **Your rating:** A strong average helps people click, but a few honest critical reviews make the whole profile look more believable.\n- **Your replies:** Responding shows you are engaged and gives you a chance to mention your service naturally.",
+    "## How to benchmark your top three competitors",
+    "This takes about thirty minutes, and you only need a notebook or a simple spreadsheet. Here is the process.",
+    "- Search the main phrase a customer would use, such as \"plumber near me\" or \"dentist in Northridge,\" ideally on your phone while standing in your service area.\n- Write down the three businesses in the map pack.\n- Open each profile and note the total reviews and the average rating.\n- Sort their reviews by newest and note how often new ones arrive.\n- Read a handful and see which services and neighborhoods customers mention.\n- Check whether the owner replies, and how quickly.\n- Repeat the same notes for your own profile.",
+    "Now compare. You may find you are close on volume but far behind on recency. Or your total is fine but nobody ever mentions what you actually do.",
+    "Say you run an HVAC company in Porter Ranch. If the top competitor gets fresh reviews every week and replies to each one, matching that pace matters more than matching their lifetime total.",
+    "## Turn the gaps into a weekly plan",
+    "Look at your notes and pick the biggest gap. Then fix one thing at a time.",
+    "If you are behind on **recency**, build a simple habit of asking every happy customer right after the job is done. Our guide on [getting more Google reviews without being pushy](/blog/how-to-get-more-google-reviews-without-being-pushy) walks through easy ways to do it.",
+    "If you are behind on **replies**, set aside ten minutes twice a week to respond to every review, good or bad. Keep it warm, short and human.",
+    "If the keywords are missing, make sure your profile itself is clear about what you do and where. A well-built [Google Business Profile](/services/google-business-profile-optimization) gives customers the context to describe you accurately.",
+    "## Don't forget the rest of the picture",
+    "Reviews are one piece of a bigger puzzle. Your categories, services, photos, website and citations all work alongside them.",
+    "That is why strong [local SEO](/services/local-seo) looks at the whole system instead of a single metric. A great review profile on a half-finished listing will still struggle.",
+    "Also, never buy reviews or offer rewards for them. It breaks Google's rules, and customers can usually tell when something feels off.",
+    "## Where to start this week",
+    "Do the benchmark first. It turns a vague worry into a short, clear list of gaps you can close.",
+    "If you would rather have a hand with it, we are a Los Angeles agency based in Porter Ranch, and we help local businesses improve their map results every day. Book a [free strategy call](/contact) and we will look at your competitors with you.",
+  ],
+};
+
+export default post;

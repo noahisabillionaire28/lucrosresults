@@ -62,6 +62,7 @@ export const siteConfig = {
     { label: "Areas We Serve", href: "/areas" },
     { label: "Los Angeles", href: "/losangeles" },
     { label: "Contact", href: "/contact" },
+    { label: "Blog", href: "/blog" },
     { label: "Apply", href: "/google#apply" },
   ],
 } as const;

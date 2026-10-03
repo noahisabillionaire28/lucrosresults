@@ -23,3 +23,19 @@ export type AreaPage = Base & {
   /** One sentence per service for the "Services we offer here" list, written for this area. */
   serviceNotes: Record<ServiceSlug, string>;
 };
+
+/**
+ * Blog post. `body` is an array of blocks:
+ *  - "## Heading"        -> H2
+ *  - "- a\n- b"          -> bulleted list (one block, lines separated by \n)
+ *  - anything else       -> paragraph
+ * Inline: **bold** and [anchor](/internal/path) links.
+ */
+export type BlogPost = {
+  slug: string; // must match the file name
+  title: string; // H1 and thumbnail text
+  metaTitle: string; // <title>, unique, <= 65 chars
+  description: string; // meta description, unique, 120-160 chars
+  date: string; // ISO date, YYYY-MM-DD
+  body: string[];
+};

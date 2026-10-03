@@ -33,4 +33,29 @@ for (const [dir, min, max, linkPrefix, minLinks, maxLinks] of [
     bad += problems.length;
   }
 }
+
+// Blog posts: 800-1200 words, 2-8 links, at least 2 to service/area pages, unique anchors, one H2 minimum.
+{
+  const base = resolve("lib/content/blog");
+  const seen = { title: new Set(), desc: new Set() };
+  for (const f of readdirSync(base).filter((f) => f.endsWith(".ts")).sort()) {
+    const p = (await import(pathToFileURL(resolve(base, f)).href)).default;
+    const total = p.body.reduce((n, t) => n + words(strip(t.replace(/^## |^- |\n- /g, " ").replace(/\*\*/g, ""))), 0);
+    const ls = p.body.flatMap(links);
+    const problems = [];
+    if (total < 800 || total > 1200) problems.push(`words ${total} outside 800-1200`);
+    if (ls.length > 8) problems.push(`links ${ls.length} > 8`);
+    if (ls.filter((l) => /^\/(services|areas)\//.test(l.href)).length < 2) problems.push("needs >= 2 service/area links");
+    if (new Set(ls.map((l) => l.text.toLowerCase())).size !== ls.length) problems.push("repeated anchor text");
+    if (p.body.filter((b) => b.startsWith("## ")).length < 3) problems.push("needs >= 3 H2s");
+    if (p.slug + ".ts" !== f) problems.push("slug/filename mismatch");
+    if (p.metaTitle.length > 65) problems.push(`metaTitle ${p.metaTitle.length} chars`);
+    if (p.description.length < 120 || p.description.length > 160) problems.push(`description ${p.description.length} chars`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(p.date)) problems.push("bad date");
+    if (seen.title.has(p.metaTitle) || seen.desc.has(p.description)) problems.push("duplicate metadata");
+    seen.title.add(p.metaTitle); seen.desc.add(p.description);
+    console.log(`${problems.length ? "FAIL" : "ok  "} blog/${f}  words=${total} links=${ls.length}${problems.length ? "  -> " + problems.join("; ") : ""}`);
+    bad += problems.length;
+  }
+}
 process.exit(bad ? 1 : 0);

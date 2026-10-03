@@ -1,0 +1,46 @@
+import type { BlogPost } from "@/lib/types";
+
+const post: BlogPost = {
+  slug: "what-is-nap-and-why-it-matters-for-local-seo",
+  title: "What Is NAP and Why It Matters for Local SEO",
+  metaTitle: "NAP for Local SEO: What It Is and How to Fix It | Lucros Results",
+  description:
+    "NAP means name, address and phone number. Learn why consistent NAP builds trust with Google, the common mistakes to avoid, and how to audit yours this week.",
+  date: "2026-10-03",
+  body: [
+    "NAP stands for **name, address and phone number**. It is the basic contact information for your business, and it shows up all over the internet: your website, your Google listing, Yelp, Apple Maps, Bing and dozens of directories.",
+    "Here is why it matters. Search engines try to confirm that a business is real before they send customers to it. When your details match everywhere, that is easy. When they do not, it creates doubt.",
+    "This guide explains NAP in plain English, the mistakes we see most often, and a simple way to check and fix yours. It is a core piece of [local SEO](/services/local-seo).",
+    "## What NAP actually means",
+    "Your NAP is just three things written the same way every time.",
+    "- **Name:** your business name, exactly as customers know it\n- **Address:** your street address, including suite number\n- **Phone:** one main phone number that rings your business",
+    "Think of it like a signature. If you signed your name three different ways on three contracts, someone would start asking questions. Search engines do the same thing with your listings.",
+    "## Why consistency builds trust",
+    "Google has said that local results are based on **relevance, distance and prominence**. Prominence is about how well known and trusted a business seems, and information that matches across the web helps tell that story.",
+    "When Google sees the same name, address and phone number on your website, your Google listing and other sites, it can be confident it has the right business. When the details conflict, it has to guess.",
+    "Customers feel it too. Someone who finds an old phone number or a wrong address may simply call the next business on the list.",
+    "## Common NAP mistakes",
+    "Most NAP problems are small and easy to miss. These are the ones we see again and again.",
+    "- **Suite vs Ste vs #:** \"Suite 200\", \"Ste 200\" and \"#200\" look the same to you but can look like different addresses to software\n- **Old phone numbers:** a number from before you moved or switched carriers still sitting on an old directory\n- **Old addresses:** listings that were never updated after a move\n- **Name variations:** \"Smith Plumbing\", \"Smith Plumbing Inc.\" and \"Smith Plumbing LA\" used in different places\n- **Keyword stuffing:** adding services or city names to your business name to try to rank, which goes against Google's guidelines",
+    "Pick one format and stick with it. If your signage and legal paperwork say \"Suite\", use \"Suite\" everywhere.",
+    "## Tracking numbers and service-area businesses",
+    "Two situations cause extra confusion, so they deserve their own section.",
+    "**Tracking numbers.** Call tracking is useful because it shows which ads or pages produce calls. But if a tracking number replaces your main number everywhere, your listings stop matching. A safer approach is to keep your real, main number as the primary one and use a tracking number only as a secondary number or on specific ad landing pages.",
+    "**Service-area businesses.** Say you run a mobile detailing company in Northridge and you work from home. You travel to customers, so you may not want your home address public. Google lets service-area businesses hide the address on their profile and list the areas they serve instead.",
+    "The key is to be consistent about it. Do not show your home address on one site and hide it on another. Our [Google Business Profile optimization](/services/google-business-profile-optimization) work covers setting this up correctly.",
+    "## How to audit and fix your NAP",
+    "You can do a basic audit in an afternoon. Here is the process.",
+    "- **Step 1:** Write down your correct name, address and phone number in one document. This is your master copy.\n- **Step 2:** Search your business name and your old phone numbers on Google and note every listing you find.\n- **Step 3:** Check the big ones first: your Google listing, Yelp, Apple Maps, Bing and Facebook.\n- **Step 4:** Compare each listing to your master copy, character by character.\n- **Step 5:** Fix what is wrong. Edit directly where you can, or claim the listing and then update it.",
+    "Duplicate listings need extra care. If you find a second listing for the same location, ask to have it merged or removed rather than leaving it. For a deeper look at these directories, see our guide to [citations on Bing, Apple Maps and Yelp](/blog/citations-explained-bing-apple-maps-yelp).",
+    "Changes can take a while to show up, so be patient and recheck after a few weeks.",
+    "## Where your NAP should appear",
+    "Your details should be easy to find in a handful of key places.",
+    "- **Website footer:** on every page, as real text rather than an image\n- **Contact page:** full name, address and phone, ideally with a map\n- **Google Business Profile:** exactly matching your website\n- **Major directories:** Yelp, Apple Maps, Bing and Facebook\n- **Industry and local directories:** chambers of commerce and trade sites that fit your business",
+    "Use text that visitors can click or tap, so a phone number on mobile can be called in one touch. If you serve a specific neighborhood, a page for that area such as [Woodland Hills](/areas/woodland-hills) can reinforce where you work.",
+    "## Your next step",
+    "NAP is not glamorous, but it is the foundation everything else sits on. Fixing it will not make you rank overnight, yet it removes a quiet problem that can hold your other efforts back.",
+    "If you would rather have someone handle the audit, we are a Los Angeles marketing agency based in Porter Ranch and we are happy to help. Book a [free strategy call](/contact) and we will take a look at where your business details stand.",
+  ],
+};
+
+export default post;

@@ -30,6 +30,7 @@ export function Footer() {
           <Link href="/areas" className="flex min-h-[44px] items-center">Areas We Serve</Link>
           <Link href="/losangeles" className="flex min-h-[44px] items-center">Los Angeles</Link>
           <Link href="/contact" className="flex min-h-[44px] items-center">Contact</Link>
+          <Link href="/blog" className="flex min-h-[44px] items-center">Blog</Link>
           <span className="flex min-h-[44px] items-center md:ml-auto">© 2026 {siteConfig.name}</span>
         </div>
       </div>

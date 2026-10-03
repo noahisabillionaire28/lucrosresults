@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { siteConfig } from "@/site.config";
 import { Logo } from "./Logo";
 
-const desktopLinks = siteConfig.nav.filter((l) => ["/services", "/areas", "/losangeles", "/contact"].includes(l.href));
+const desktopLinks = siteConfig.nav.filter((l) => ["/services", "/areas", "/losangeles", "/contact", "/blog"].includes(l.href));
 
 /**
  * Desktop: 84px row + 1px divider (divider bottom at 85px). The divider spans the 1200px container; logo and
@@ -23,7 +23,7 @@ export function Nav() {
         <div className="flex items-center justify-between px-6 pb-5 pt-3 md:h-[84px] md:px-10 md:py-0 lg:px-16">
           <Logo />
           {/* Desktop links: sit between the logo and Sign Up (hidden below md; the hamburger panel has them). */}
-          <nav aria-label="Primary" className="ml-auto mr-8 hidden items-center gap-6 md:flex lg:gap-8">
+          <nav aria-label="Primary" className="ml-auto mr-6 hidden items-center gap-4 md:flex lg:mr-8 lg:gap-8">
             {desktopLinks.map((l) => (
               <Link key={l.href} href={l.href} className="text-[15px] font-medium leading-none tracking-[-0.01em] text-black/60 transition-colors hover:text-black">
                 {l.label}

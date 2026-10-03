@@ -1,0 +1,46 @@
+import type { BlogPost } from "@/lib/types";
+
+const post: BlogPost = {
+  slug: "why-your-website-title-tag-matters-for-local-search",
+  title: "Why Your Website Title Tag Matters for Local Search",
+  metaTitle: "Title Tag for Local Search: How to Write One | Lucros Results",
+  description:
+    "Learn what a title tag is, where it shows up, and how to write a clear title tag for local search that helps Los Angeles customers find your pages.",
+  date: "2026-10-03",
+  body: [
+    "Open any website and look at the tiny label on the browser tab. That label is the **title tag**. It is also the big blue headline people see on a Google search result.",
+    "For a local business, it is one of the first things a stranger reads about you. It is also one of the easiest things on your site to fix.",
+    "Here is what a title tag does, how to write a good one, and how to change yours this week.",
+    "## What a title tag is",
+    "A title tag is a short line of text, set in the hidden code of each page, that tells people and search engines **what that page is about**. You never see it on the page itself. You see it in two other places.",
+    "- The tab at the top of your browser\n- The clickable headline in Google search results",
+    "It also shows up when someone bookmarks your page or shares the link in some apps. Every page on your site has its own title tag, even if nobody ever set it on purpose.",
+    "## Why it matters for local search",
+    "Google has said that local results depend on **relevance, distance and prominence**. Relevance means how well your page matches what the person searched for. Your title tag is one of the clearest signals of relevance you can give.",
+    "It also works as an ad for your page. Two businesses can show up side by side, and the one whose title says exactly what the searcher wants is the one that gets the click.",
+    "Title tags will not fix a missing Google listing or a weak profile on their own. They are one piece of [local SEO](/services/local-seo), and an easy one to get right.",
+    "## How to write a good title tag for a local page",
+    "Use a simple formula: **main service, then city, then brand name**. Keep the wording natural, like something a real person would say.",
+    "- **Lead with the service.** Put the words a customer would type first.\n- **Add your city or area.** Local searchers often include it.\n- **End with your brand.** It builds recognition and trust.\n- **Make every page unique.** Each page should describe its own topic.\n- **Keep it fairly short.** Long titles get cut off with dots in search results, so put the important words at the start.",
+    "Google decides how much of a title to show, so there is no single perfect length. A good rule is to say what matters in the first few words and stop there.",
+    "## Examples for different kinds of pages",
+    "These are made-up examples. Say you run a plumbing company in Northridge called Valley Pipe Pros.",
+    "- **Homepage:** Plumber in Northridge, CA | Valley Pipe Pros\n- **Service page:** Water Heater Repair in Northridge | Valley Pipe Pros\n- **Location page:** Plumbing Services in Porter Ranch | Valley Pipe Pros",
+    "Notice that each title is different, reads naturally, and tells you what is on the page. If you serve several neighborhoods, a separate page for each one, such as our own page for [Porter Ranch](/areas/porter-ranch), gives each area its own clear title.",
+    "Only create a location page if you really serve that area and have something useful to say on it. A page that just swaps the city name is not worth publishing.",
+    "## Common title tag mistakes",
+    "We see the same few problems on small business sites again and again.",
+    "- **Every page has the same title.** Google and customers cannot tell your pages apart.\n- **Keyword stuffing.** A title like \"Plumber Plumbing LA Plumber Cheap Plumbers Near Me\" reads like spam and puts people off.\n- **Only the brand name.** Unless you are famous, \"Valley Pipe Pros\" alone does not tell anyone what you do.\n- **Leftover default text.** Titles like \"Home\" or \"Untitled\" mean nobody ever set one.\n- **No city anywhere.** For a local business, that is a missed chance to show you are nearby.",
+    "If a title would confuse a friend who has never heard of your business, rewrite it.",
+    "## How to check and change yours",
+    "Checking takes about a minute. Search Google for your business name and look at the headline on your result. Then hover over each browser tab as you click through your site. Write down what you see.",
+    "To change a title, look in your site builder for a section often called **SEO settings** or **page settings**. The names differ, but the idea is the same.",
+    "- **WordPress:** Use an SEO plugin, or the page's SEO fields, to edit the SEO title.\n- **Wix:** Open the page menu, choose SEO basics, and edit the title.\n- **Squarespace:** Open the page settings and find the SEO section.\n- **Shopify:** Edit the page title under Search engine listing preview.",
+    "Google may still rewrite a title it thinks fits better. That is normal. A clear, honest title makes a rewrite less likely.",
+    "## What to do this week",
+    "Make a list of your main pages. Beside each one, write a title using the formula above. Update the homepage first, then your top services, then any area pages. Then pair that work with your [Google Business Profile](/services/google-business-profile-optimization), since the profile and the website should tell the same story.",
+    "If you would rather have a second pair of eyes, our [lead generation](/services/lead-generation) work starts with exactly this kind of review. We are a Los Angeles agency based in Porter Ranch, and we are happy to look at your pages on a [free strategy call](/contact).",
+  ],
+};
+
+export default post;
