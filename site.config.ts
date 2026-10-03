@@ -6,11 +6,8 @@ type Client = { name: string; slug: string; tall?: boolean };
 
 export const siteConfig = {
   name: "Lucros Results",
-  // TODO: set NEXT_PUBLIC_SITE_URL to the real domain. Until then Vercel's production URL is used (so canonical
-  // URLs, the sitemap and og:image links point at a live site), with lucrosresults.com as the last fallback.
-  url:
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "https://lucrosresults.com"),
+  // Canonical URLs, the sitemap and schema use NEXT_PUBLIC_SITE_URL if set, otherwise the www domain below.
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.lucrosresults.com",
   tagline: "Marketing for local businesses in Los Angeles.",
   areaServed: "Los Angeles",
   founder: "Noah Fernando",
