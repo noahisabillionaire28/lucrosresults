@@ -47,6 +47,7 @@ export const siteConfig = {
     { name: "Veloce Luxury Rentals", slug: "veloce-luxury-rentals", tall: true },
     { name: "Four Brothers Commercial Maintenance", slug: "four-brothers-commercial-maintenance", tall: true },
     { name: "BRYA", slug: "brya" },
+    { name: "The Cactus Doctor", slug: "the-cactus-doctor", tall: true },
     { name: "Conquer Credit Management (CCMI)", slug: "conquer-credit-management" },
     { name: "Cigar House", slug: "cigar-house" },
   ] as readonly Client[],
