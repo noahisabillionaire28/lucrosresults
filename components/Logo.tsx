@@ -1,13 +1,12 @@
+import Image from "next/image";
 import Link from "next/link";
 
-export function LogoMark({ className = "h-8 w-8", rx = 9 }: { className?: string; rx?: number }) {
-  return (
-    <svg viewBox="0 0 32 32" className={className} aria-hidden="true">
-      <rect width="32" height="32" rx={rx} fill="#000" />
-      <path d="M11 8v13h10" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-      <circle cx="21" cy="11" r="2.2" fill="#fff" />
-    </svg>
-  );
+/**
+ * Brand mark: black rounded tile with the orange mark (vector, so it stays crisp at any size).
+ * Source: public/brand/logo-tile.svg (traced from public/brand/logo-original.png).
+ */
+export function LogoMark({ className = "h-8 w-8" }: { className?: string }) {
+  return <Image src="/brand/logo-tile.svg" alt="Lucros Results logo" width={64} height={64} unoptimized className={`shrink-0 ${className}`} />;
 }
 
 export function Logo() {

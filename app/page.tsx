@@ -75,7 +75,7 @@ export default function Home() {
       <SectionWrapper>
         {/* Centered "free stuff" card: logo tile straddles the top edge, then chip, 2-line headline, short copy, form. */}
         <Card className="relative flex flex-col items-center px-6 pb-8 pt-14 text-center md:px-12 md:pb-10 md:pt-20">
-          <LogoMark rx={6} className="absolute left-1/2 top-0 h-16 w-16 -translate-x-1/2 -translate-y-1/2 md:h-20 md:w-20" />
+          <LogoMark className="absolute left-1/2 top-0 h-16 w-16 -translate-x-1/2 -translate-y-1/2 md:h-20 md:w-20" />
           <Chip size="lg">Free stuff</Chip>
           <div className="mt-6">
             <SectionHeading className="text-center !text-[32px] md:!text-[60px] md:!leading-[1.08]">{"3 Tips to Get \n*Found First* on Google"}</SectionHeading>

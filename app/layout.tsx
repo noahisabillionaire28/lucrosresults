@@ -15,15 +15,17 @@ export const metadata: Metadata = {
   title: "Lucros Results | Local Marketing Agency in Los Angeles",
   description: "Marketing for local businesses in Los Angeles. Top 3 on Google Maps in 90 days — guaranteed.",
   openGraph: { siteName: siteConfig.name, type: "website", locale: "en_US" },
-  // Black "L" mark. favicon.ico holds 16/32/48; 192px PNG is a multiple of 48 (Google's favicon guidance).
+  // Black tile + orange mark. favicon.ico holds 16/32/48; the 192px PNG is a multiple of 48 (Google's favicon guidance).
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon.png", sizes: "32x32", type: "image/png" },
+      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
+  manifest: "/site.webmanifest",
 };
 export const viewport: Viewport = { themeColor: "#EFEBE5" };
 
@@ -35,6 +37,8 @@ const jsonLd: Record<string, unknown> = {
   url: siteConfig.url,
   email: siteConfig.email,
   telephone: siteConfig.phoneSchema,
+  logo: `${siteConfig.url}${siteConfig.logoPath}`,
+  image: `${siteConfig.url}${siteConfig.logoPath}`,
   address: { "@type": "PostalAddress", addressLocality: siteConfig.addressLocality, addressRegion: siteConfig.addressRegion, addressCountry: siteConfig.addressCountry },
   areaServed: [siteConfig.areaServed, ...areas.map((a) => a.name)],
   founder: { "@type": "Person", name: siteConfig.founder },

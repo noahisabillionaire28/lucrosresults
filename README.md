@@ -60,3 +60,9 @@ NAP (city-only address, phone) lives in `site.config.ts` and feeds the footer an
 - Best files: SVG or a transparent-background PNG, cropped tight to the logo (extra padding makes it look smaller).
 - Logo too small? Stacked/emblem logos can set `tall: true` on their entry in `site.config.ts` (48px mobile / 64px desktop).
 - Logos with a solid black or white background should be saved with a transparent background (otherwise they show as a box on the cream page).
+
+## Brand assets (`public/brand/`)
+- `logo-original.png` is the source art. `logo-cropped.png` is it trimmed tight with a little padding. `logo-mark.png` / `logo-mark.svg` are the orange mark alone on a transparent background (the SVG is a traced vector).
+- `logo-tile.svg` (and `logo-tile-512.png`) is the black rounded tile with the mark, used by the nav, footer and 3-tips card (`components/Logo.tsx`) and by the schema `logo` / `image` (`site.config.ts` → `logoPath`).
+- Favicons and app icons live in `public/` (`favicon.ico` 16/32/48, `icon.png`, `apple-touch-icon.png`, `android-chrome-192x192.png`, `android-chrome-512x512.png`, `site.webmanifest`) and are wired up in `app/layout.tsx`. `public/og-image.png` is the 1200x630 link-preview image.
+- To change the logo: replace the source art, re-trace to `logo-tile.svg`, and regenerate the PNGs.
