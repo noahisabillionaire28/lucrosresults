@@ -72,7 +72,7 @@ export function FAQSection({ items = faqs }: { items?: readonly { q: string; a: 
 
 /**
  * Book Your Free Strategy Call.
- * embed = true: renders the inline Calendly widget (used on /google and /los-angeles; anchor id="book").
+ * embed = true: renders the inline Calendly widget (used on /google and /losangeles; anchor id="book").
  * embed = false: a button that scrolls to the embedded section on /google.
  */
 export function BookCallCTA({ embed = false }: { embed?: boolean }) {

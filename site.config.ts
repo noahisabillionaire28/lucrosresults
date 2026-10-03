@@ -28,7 +28,7 @@ export const siteConfig = {
   phoneSchema: "+1-818-903-1753", // JSON-LD
   email: "hello@lucrosresults.com", // TODO: real email
 
-  // Calendly event, embedded inline on /google and /los-angeles. The site redirects to /booked itself
+  // Calendly event, embedded inline on /google and /losangeles. The site redirects to /booked itself
   // when Calendly reports a booking (see components/CalendlyEmbed.tsx).
   calendarLink: "https://calendly.com/noah-lucrosai/lucros-results-discovery-call",
   // Where every other "Book Strategy Call" button points (the embedded calendar)
@@ -38,8 +38,11 @@ export const siteConfig = {
   // TODO: thumbnail image for the video placeholders: drop a 16:9 image in /public and set e.g. "/video-thumb.jpg"
   videoThumbnail: "",
   videoDuration: "2:44",
+  // TODO: /losangeles hero video: thumbnail image (16:9, in /public) + embed URL (Wistia / YouTube)
+  losAngelesThumbnail: "",
+  losAngelesVideoDuration: "3:03",
   // TODO: Wistia / YouTube embed URLs (leave "" to keep the placeholder)
-  videos: { home: "", google: "", booked: "" },
+  videos: { home: "", google: "", booked: "", losangeles: "" },
 
   // "Working with..." strip. Logo files go in /public/logos/<slug>.<svg|png|webp|jpg|jpeg|avif> (any size/shape,
   // shown at a fixed height). No file for a slug yet? The company name shows as a gray text stand-in.
@@ -59,7 +62,7 @@ export const siteConfig = {
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },
     { label: "Areas We Serve", href: "/areas" },
-    { label: "Los Angeles", href: "/los-angeles" },
+    { label: "Los Angeles", href: "/losangeles" },
     { label: "Apply", href: "/google#apply" },
   ],
 } as const;

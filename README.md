@@ -17,7 +17,7 @@ Search the repo for `TODO` to find them all. Main ones:
 | Address, phone (display / tel / schema formats), email, domain, tagline, founder, calendar link, map embed, video embeds, founder photo | `site.config.ts` (single source; feeds footer + JSON-LD) |
 | Email capture → CRM/email provider (currently redirects to `/thank-you`) | `components/EmailCaptureForm.tsx` |
 | Application form submit (currently shows a thanks message only) | `components/ApplicationForm.tsx` |
-| Calendly event URL (inline embed on /google and /los-angeles) | `site.config.ts` → `calendarLink` |
+| Calendly event URL (inline embed on /google and /losangeles) | `site.config.ts` → `calendarLink` |
 | Where other "Book Strategy Call" buttons point | `site.config.ts` → `bookingPath` (`/google#book`) |
 | Wistia / YouTube embeds (home, /google, /booked) | `site.config.ts` → `videos` |
 | Google Map embed in footer (Porter Ranch, CA) | `site.config.ts` → `mapEmbedUrl` |
@@ -31,7 +31,7 @@ Search the repo for `TODO` to find them all. Main ones:
 NAP (city-only address, phone) lives in `site.config.ts` and feeds the footer and the LocalBusiness JSON-LD.
 
 ## Pages
-`/` · `/google` · `/los-angeles` · `/thank-you` (noindex) · `/booked` (noindex) · `/terms` · `/sitemap.xml` · `/robots.txt`
+`/` · `/google` · `/losangeles` (old `/los-angeles` 301-redirects here; see `next.config.mjs`) · `/thank-you` (noindex) · `/booked` (noindex) · `/terms` · `/sitemap.xml` · `/robots.txt`
 
 ## Deploy to Vercel
 1. Push this repo to GitHub.
@@ -49,7 +49,7 @@ NAP (city-only address, phone) lives in `site.config.ts` and feeds the footer an
 - Pages emit BreadcrumbList + FAQPage JSON-LD (service pages also Service).
 
 ## Calendly booking
-- The calendar is embedded inline in the "Book Your Free Strategy Call" section (`id="book"`) on `/google` and `/los-angeles`. Calendly's script loads only on those pages (`components/CalendlyEmbed.tsx`).
+- The calendar is embedded inline in the "Book Your Free Strategy Call" section (`id="book"`) on `/google` and `/losangeles`. Calendly's script loads only on those pages (`components/CalendlyEmbed.tsx`).
 - The site redirects to `/booked` itself when Calendly reports `calendly.event_scheduled`. **Do not** also set a redirect inside Calendly's event settings: it would load `/booked` inside the embed. Leave Calendly's confirmation page on its default.
 - Other "Book Strategy Call" buttons link to `/google#book`.
 

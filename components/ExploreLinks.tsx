@@ -7,7 +7,7 @@ import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 import { SectionWrapper } from "./SectionWrapper";
 
-/** Compact hub block for the homepage and /los-angeles: links to all 5 services and all 5 areas. */
+/** Compact hub block for the homepage and /losangeles: links to all 5 services and all 5 areas. */
 export function ExploreLinks() {
   const col = (title: string, items: { href: string; label: string }[]) => (
     <div>

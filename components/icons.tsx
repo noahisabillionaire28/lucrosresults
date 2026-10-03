@@ -12,3 +12,5 @@ export const KeyIcon = (p: P) => (<svg {...base} {...p}><circle cx="8" cy="15" r
 export const UsersIcon = (p: P) => (<svg {...base} {...p}><circle cx="9" cy="8" r="3.5" /><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5" /><path d="M16 4.7a3.5 3.5 0 0 1 0 6.6M18 14.8c1.9.7 3.1 2.4 3.5 5.2" /></svg>);
 export const GiftIcon = (p: P) => (<svg {...base} {...p}><rect x="3" y="8" width="18" height="4" rx="1" /><path d="M5 12v8h14v-8M12 8v12M12 8c-2.5 0-4-1-4-2.5S9.5 3 12 8Zm0 0c2.5 0 4-1 4-2.5S14.5 3 12 8Z" /></svg>);
 export const icons = { eye: EyeIcon, chart: ChartIcon, key: KeyIcon } as const;
+export const PersonIcon = (p: P) => (<svg {...base} {...p}><circle cx="12" cy="8" r="3.6" /><path d="M4.8 20c.7-3.9 3.5-6 7.2-6s6.5 2.1 7.2 6" /></svg>);
+export const BranchIcon = (p: P) => (<svg {...base} {...p}><circle cx="6" cy="5.5" r="2.2" /><circle cx="6" cy="18.5" r="2.2" /><circle cx="18" cy="9" r="2.2" /><path d="M6 7.7v8.6M18 11.2c0 3.6-3.5 4-7 4.6-2 .3-4 .8-5 2" /></svg>);
