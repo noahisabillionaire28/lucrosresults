@@ -16,8 +16,8 @@ export const siteConfig = {
   founder: "Noah Fernando",
   founderRole: "Founder",
   founderPhoto: "/founder-noah.jpg",
-  // Brand logo (black tile + orange mark, 512x512 PNG) used in the LocalBusiness schema `logo` and `image`.
-  logoPath: "/brand/logo-tile-512.png",
+  // Brand logo (black tile + white mark, 512x512 PNG) used in the LocalBusiness schema `logo` and `image`.
+  logoPath: "/brand/logo-tile-bw-512.png",
   founderPhotoAlt: "Noah Fernando, Founder of Lucros Results",
 
   // NAP — identical on every page. Service-area business: city only, no street address.

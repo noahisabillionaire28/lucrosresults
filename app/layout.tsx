@@ -15,17 +15,19 @@ export const metadata: Metadata = {
   title: "Lucros Results | Local Marketing Agency in Los Angeles",
   description: "Marketing for local businesses in Los Angeles. Top 3 on Google Maps in 90 days — guaranteed.",
   openGraph: { siteName: siteConfig.name, type: "website", locale: "en_US" },
-  // Black tile + orange mark. favicon.ico holds 16/32/48; the 192px PNG is a multiple of 48 (Google's favicon guidance).
+  // Black tile + white mark. The "-v2" file names (and ?v=2 on the manifest) bust browser caches, which hold on to
+  // favicons very hard. Bump the suffix again whenever the icon changes. favicon-v2.ico holds 16/32/48; the 192px PNG
+  // is a multiple of 48 (Google's favicon guidance).
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", sizes: "32x32", type: "image/png" },
-      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
-      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+      { url: "/favicon-v2.ico", sizes: "any" },
+      { url: "/icon-v2.png", sizes: "32x32", type: "image/png" },
+      { url: "/android-chrome-192x192-v2.png", sizes: "192x192", type: "image/png" },
+      { url: "/android-chrome-512x512-v2.png", sizes: "512x512", type: "image/png" },
     ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    apple: [{ url: "/apple-touch-icon-v2.png", sizes: "180x180", type: "image/png" }],
   },
-  manifest: "/site.webmanifest",
+  manifest: "/site.webmanifest?v=2",
 };
 export const viewport: Viewport = { themeColor: "#EFEBE5" };
 

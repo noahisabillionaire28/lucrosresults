@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/losangeles" },
-  // Page-level openGraph replaces the layout's, so it is spelled out in full. og-image.png is 1200x630 (logo on cream).
+  // Page-level openGraph replaces the layout's, so it is spelled out in full. og-image-v2.png is 1200x630 (logo on cream).
   openGraph: {
     title,
     description,
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     type: "website",
     locale: "en_US",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Lucros Results" }],
+    images: [{ url: "/og-image-v2.png", width: 1200, height: 630, alt: "Lucros Results" }],
   },
-  twitter: { card: "summary_large_image", title, description, images: ["/og-image.png"] },
+  twitter: { card: "summary_large_image", title, description, images: ["/og-image-v2.png"] },
 };
 
 const blocks = [

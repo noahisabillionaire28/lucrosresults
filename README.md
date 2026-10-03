@@ -62,7 +62,8 @@ NAP (city-only address, phone) lives in `site.config.ts` and feeds the footer an
 - Logos with a solid black or white background should be saved with a transparent background (otherwise they show as a box on the cream page).
 
 ## Brand assets (`public/brand/`)
-- `logo-original.png` is the source art. `logo-cropped.png` is it trimmed tight with a little padding. `logo-mark.png` / `logo-mark.svg` are the orange mark alone on a transparent background (the SVG is a traced vector).
-- `logo-tile.svg` (and `logo-tile-512.png`) is the black rounded tile with the mark, used by the nav, footer and 3-tips card (`components/Logo.tsx`) and by the schema `logo` / `image` (`site.config.ts` → `logoPath`).
-- Favicons and app icons live in `public/` (`favicon.ico` 16/32/48, `icon.png`, `apple-touch-icon.png`, `android-chrome-192x192.png`, `android-chrome-512x512.png`, `site.webmanifest`) and are wired up in `app/layout.tsx`. `public/og-image.png` is the 1200x630 link-preview image.
-- To change the logo: replace the source art, re-trace to `logo-tile.svg`, and regenerate the PNGs.
+- **In use (black & white):** `logo-tile-bw.svg` / `logo-tile-bw-512.png` (black rounded tile + white mark) power the nav, footer and 3-tips card (`components/Logo.tsx`) and the schema `logo` / `image` (`site.config.ts` → `logoPath`). `logo-mark-white.svg/.png` and `logo-mark-black.svg/.png` are the bare mark on a transparent background (white for dark surfaces, black for light ones).
+- **Kept, not used:** the orange versions (`logo-tile.svg`, `logo-tile-512.png`, `logo-mark.svg/.png`), plus `logo-original.png` (source art) and `logo-cropped.png`.
+- **Favicons / app icons** live in `public/` with `-v2` in the file name (`favicon-v2.ico` 16/32/48, `icon-v2.png`, `apple-touch-icon-v2.png`, `android-chrome-192x192-v2.png`, `android-chrome-512x512-v2.png`) and `site.webmanifest`, all wired in `app/layout.tsx`. Browsers cache favicons very hard, so **whenever the icon changes, bump the suffix (`-v3`) and the `?v=` on the manifest link.** `/favicon.ico` and `/apple-touch-icon.png` also serve the current icon for crawlers that request those default paths. Do not add `app/favicon.ico`, `app/icon.*` or `app/apple-icon.*`: Next.js would use them instead of the links above.
+- `public/og-image-v2.png` is the 1200x630 link-preview image (cream background, tile + wordmark, "Marketing Agency Los Angeles").
+- To change the logo: replace the source art, re-trace to the tile SVG, regenerate the PNGs and icons.
