@@ -5,6 +5,7 @@ import { SectionWrapper } from "@/components/SectionWrapper";
 import { Reveal } from "@/components/Reveal";
 import { Card } from "@/components/Card";
 import { LAHero } from "@/components/LAHero";
+import { NapBlock } from "@/components/NapBlock";
 import { ExploreLinks } from "@/components/ExploreLinks";
 import { AdvantageSection, BookCallCTA, FAQSection, ProcessSection } from "@/components/sections";
 
@@ -31,6 +32,8 @@ export const metadata: Metadata = {
 const blocks = [
   { h: "Google Business Profile Optimization", p: ["Your Google Business Profile is the first thing a nearby customer sees. We tune every part of it so Google knows exactly what you do and where you do it.", "A complete, active profile earns the trust that moves you up the map."] },
   { h: "Local SEO", p: ["Local SEO is how Los Angeles customers find you instead of the shop down the street. We build the signals Google looks for when it decides who shows up first.", "Rankings keep working after we're done, month after month."] },
+  { h: "Google Ads", p: ["Google Ads puts your business in front of people in Los Angeles at the moment they search for what you sell. We build tight, local campaigns so your budget goes to searches that can turn into a phone call.", "It is the fastest way to start getting calls while your map ranking climbs."] },
+  { h: "Meta Ads", p: ["Meta Ads reach people on Facebook and Instagram before they ever type a search. We pair clear offers with local targeting so nearby customers hear about you first.", "Search brings the ready-to-buy customer, and Meta keeps your name in front of everyone else."] },
   { h: "Lead Generation for Local Businesses", p: ["Rankings only matter if they turn into calls and bookings. We make sure every click has an easy way to reach you.", "More visibility, more calls, more clients."] },
 ];
 
@@ -54,6 +57,7 @@ export default function LosAngelesPage() {
         </div>
       </SectionWrapper>
 
+      <NapBlock />
       <ExploreLinks />
       <AdvantageSection />
       <ProcessSection />

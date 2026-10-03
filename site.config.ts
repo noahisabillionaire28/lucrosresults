@@ -18,7 +18,7 @@ export const siteConfig = {
   founderPhoto: "/founder-noah.jpg",
   // Brand logo (black tile + white mark, 512x512 PNG) used in the LocalBusiness schema `logo` and `image`.
   logoPath: "/brand/logo-tile-bw-512.png",
-  founderPhotoAlt: "Noah Fernando, Founder of Lucros Results",
+  founderPhotoAlt: "Noah Fernando, founder of Lucros Results, marketing agency in Los Angeles",
 
   // NAP — identical on every page. Service-area business: city only, no street address.
   address: "Porter Ranch, CA",
@@ -28,7 +28,6 @@ export const siteConfig = {
   phone: "(818) 903-1753", // display format
   phoneTel: "+18189031753", // tel: link
   phoneSchema: "+1-818-903-1753", // JSON-LD
-  email: "hello@lucrosresults.com", // TODO: real email
 
   // Calendly event, embedded inline on /google and /losangeles. The site redirects to /booked itself
   // when Calendly reports a booking (see components/CalendlyEmbed.tsx).
@@ -65,6 +64,7 @@ export const siteConfig = {
     { label: "Services", href: "/services" },
     { label: "Areas We Serve", href: "/areas" },
     { label: "Los Angeles", href: "/losangeles" },
+    { label: "Contact", href: "/contact" },
     { label: "Apply", href: "/google#apply" },
   ],
 } as const;

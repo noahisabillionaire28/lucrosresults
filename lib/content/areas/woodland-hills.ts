@@ -8,46 +8,58 @@ const page: AreaPage = {
   description: "Marketing agency for Woodland Hills businesses. We get you into Google's top 3 Maps results in 90 days for a flat $1,500, or you get a full refund.",
   short: "We help Woodland Hills businesses show up in Google's top 3 Maps results within 90 days, guaranteed.",
   intro: [
-    "Lucros Results is a marketing agency that works with local businesses across Los Angeles, including Woodland Hills. Our main job is simple. We get your business into Google's top 3 Maps results within 90 days. If we miss, you get a full refund.",
-    "The fee is a flat $1,500, paid once. There is no contract. If you run a practice, shop, restaurant or service company in Woodland Hills, this page explains how local search works here and what we do about it."
+    "A practice manager in Warner Center has a full inbox, a phone that keeps ringing and no spare hour for marketing. This page is written for that person, and for any owner in Woodland Hills who wants to be found on Google Maps without adding another job to the week.",
+    "Our offer is built for exactly that. We aim to place your business in the top 3 Maps results within 90 days. One flat $1,500 payment covers it, nothing is locked in by contract, and we refund every dollar if we fall short.",
   ],
   sections: [
     {
-      heading: "What local search looks like in Woodland Hills",
+      heading: "A day in the life of a Woodland Hills listing",
       paragraphs: [
-        "Most local searches here happen on a phone. Someone at a desk in Warner Center wants lunch. A parent near Topanga Canyon Boulevard needs a dentist. A shopper at Westfield Topanga & The Village looks for a nail salon. They type what they want, and Google shows a map with three businesses on top.",
-        "Those three listings are called the map pack. It sits above the regular website results. Most people tap one of the three and never scroll further. If your business is not in that group, many nearby customers never see you."
+        "Your listing works a shift even when you are not at your desk. Early on, commuters on the 101 and office staff heading into Warner Center look up coffee, parking-friendly dentists and quick service appointments. The listings that appear first collect those calls before the workday has started.",
+        "Late morning is quieter. Then lunch hits. Hundreds of people leave nearby offices with twenty minutes and one question typed into a phone. They pick from the three businesses on the map, usually without scrolling. After work, shoppers around Westfield Topanga & The Village do the same thing for a salon, a repair shop or dinner."
       ]
     },
     {
-      heading: "Why the top 3 Maps results matter here",
+      heading: "Why three spots decide the day",
       paragraphs: [
-        "Woodland Hills is crowded with professionals. Ventura Boulevard is lined with medical offices, law firms, salons and restaurants, and many of them sell the same thing you do. When a customer picks a business from a short list, being on that list is everything.",
-        "Google says it ranks local results on three things: relevance, distance and prominence. Relevance is how well your listing matches the search. Distance is how close you are to the searcher. Prominence is how well known and trusted your business looks online. You cannot move your building, but you can improve the other two. That is where [Google Business Profile optimization](/services/google-business-profile-optimization) does most of its work."
+        "Those three spots are the map pack, and Google fills them using three factors it has named publicly: relevance, distance and prominence. Relevance is how well your listing fits the search. Distance is how near the searcher stands. Prominence is how established your business looks across the web.",
+        "Ventura Boulevard has plenty of offices selling what you sell, so a half-finished profile gets passed over. A complete one, built through [Google Business Profile optimization](/services/google-business-profile-optimization), gives Google the facts it needs to trust you. You cannot move your building. You can fix the rest."
       ]
     },
     {
-      heading: "How we help, in four steps",
+      heading: "What we handle, and what we ask of you",
       paragraphs: [
-        "First, we hold a strategy call. It takes about 15 minutes, it is free, and there is no pressure. We look at where you stand and tell you plainly whether we can help.",
-        "Second is onboarding. You give us access to what we need, and we handle everything else. It takes about 15 minutes of your time. There is no homework.",
-        "Third is execution. We close the gaps that Google rewards in local rankings. Most clients see movement in four to six weeks, and full results can take up to 90 days.",
-        "Fourth, you get an update every Friday. It is written in plain English and covers your rankings and what we do next. You never have to guess what you paid for."
+        "The split is deliberate. You keep running the office, and we do the work that moves the ranking."
+      ],
+      bullets: [
+        "We handle: a free strategy call of about 15 minutes, where we look at your listing and say honestly whether we can help.",
+        "We handle: every fix after onboarding, closing the gaps Google rewards in local rankings.",
+        "We handle: a plain-English update each Friday, covering where you rank and what happens next."
       ]
     },
     {
-      heading: "What a business owner here can expect",
+      heading: "What we ask of you",
       paragraphs: [
-        "Expect a simple deal. One flat fee of $1,500. No contract and no add-ons you did not ask for. If your business is not in the top 3 Maps results after 90 days, we refund the full amount. That guarantee covers the Maps ranking offer only. It does not cover ads or lead volume.",
-        "Expect to spend very little time on it. Your job is to run your business, answer new calls and keep doing good work. We do the rest and tell you every Friday how it is going.",
-        "Expect honesty about timing. Rankings do not change overnight. Early movement tends to show in the first month or two, and we report it as it happens."
+        "Your side of the deal is short, and it fits between patients, meetings and phone calls. Nothing here needs a marketing background or a free afternoon."
+      ],
+      bullets: [
+        "Join the 15-minute call and answer a few questions about your services.",
+        "Give us access during onboarding. That takes about 15 minutes of your time.",
+        "Read the Friday note. Tell us if something in it looks wrong."
       ]
     },
     {
-      heading: "Woodland Hills is a commuter and shopper market",
+      heading: "Weekday rhythm, weekend rhythm",
       paragraphs: [
-        "Woodland Hills sits at the western end of the Valley, along the 101. Warner Center fills with office workers on weekdays, and shoppers come to Westfield Topanga & The Village on weekends. Many of your customers do not live nearby. They are passing through, on a break or on their way home to Calabasas, Tarzana or Canoga Park.",
-        "That changes how you should think about visibility. A person standing near Canoga Avenue searches for what is close to them right now. Google weighs that distance. So your listing needs to be accurate, complete and trusted, so it wins when someone nearby is ready to choose. If you also want to reach people before they search, [Meta Ads](/services/meta-ads) can put your offer in front of nearby residents who may not know you yet."
+        "Weekdays favor businesses near the offices: dentists, accountants, caterers, print shops and anyone who can serve a worker in under an hour. Searches cluster around mornings, lunch and the early evening drive home. Weekends tilt toward retail, restaurants and personal services near the malls.",
+        "That pattern is why we look at your listing through your customers' schedule. Are your hours right on a Friday afternoon? Does the profile say you take walk-ins? Small details like these decide whether a rushed searcher picks you or the next name down the list."
+      ]
+    },
+    {
+      heading: "What the timeline looks like",
+      paragraphs: [
+        "Google does not reshuffle the map overnight. Movement usually appears in four to six weeks, and full results can take up to 90 days. If you are not in the top 3 by then, the refund is yours. That promise covers the Maps ranking offer only, not ads or lead volume.",
+        "Some owners also want people who have never searched for them to see their name. [Meta Ads](/services/meta-ads) can do that for residents around Canoga Avenue and Topanga Canyon Boulevard. It is separate from the Maps offer."
       ]
     }
   ],
@@ -60,28 +72,28 @@ const page: AreaPage = {
   },
   faqs: [
     {
-      q: "How do I compete with other practices along Ventura Boulevard?",
-      a: "You do not need to be the biggest. You need a complete, accurate and active profile that Google trusts. Many nearby competitors leave theirs half done. Closing those gaps is how we move a business into the top 3."
+      q: "Will lunch-hour searchers actually find my office?",
+      a: "They will if you are in the map pack. Someone on a break types a short phrase and taps one of three results. A listing that is missing hours, services or a clear category rarely makes that shortlist, so we fill those gaps first."
     },
     {
-      q: "I am in a Warner Center office building. Can I still rank?",
-      a: "Yes. Many businesses in shared office buildings rank well. Your profile needs the right category, accurate address details and clear service information. We check these during execution and fix what is missing."
+      q: "My suite is inside a large Warner Center building. Is that a problem?",
+      a: "No. Plenty of businesses in shared towers appear on the map. What matters is that your category, service details and address are set up the way Google expects. We check each during execution and correct what is off."
     },
     {
-      q: "How does distance affect my ranking?",
-      a: "Google compares your location to where the person is searching. Businesses closer to the searcher get an edge, and you cannot change that. What you can change is relevance and prominence, which is where our work focuses. A strong listing can beat a closer one that is neglected."
+      q: "Does the Westfield Topanga & The Village crowd matter for me?",
+      a: "If you sell to shoppers, yes. People near the mall search for something close and ready to visit today. Google weighs distance heavily for those searches, so your listing must be accurate and trusted. A good website helps too, and [local SEO](/services/local-seo) supports that side."
     },
     {
-      q: "Many of my customers commute in from other areas. Does that matter?",
-      a: "It does. People who work in Warner Center often search from their office or car, not from home. Your listing has to be clear and complete so it works for them at that moment. If you want more reach beyond the map, [local SEO](/services/local-seo) helps your website support your listing."
+      q: "What do you need from me each week?",
+      a: "Very little. After onboarding, your main task is reading Friday's note and answering if we ask a question. Everything else stays with us, so your front desk keeps its attention on patients and clients. If a Friday update raises a question, reply to it and we answer in plain terms."
     },
     {
-      q: "How fast will I see results?",
-      a: "Most clients see movement in four to six weeks. Full results can take up to 90 days. We send a plain-English update every Friday, so you can follow progress without asking."
+      q: "How long before the phone rings more?",
+      a: "Rankings usually start to shift in four to six weeks, and the full 90 days is the outer limit for the top 3 result. We cannot promise call volume, because that depends on your services and how your office answers."
     },
     {
-      q: "What if I do not reach the top 3?",
-      a: "If your business is not in Google's top 3 Maps results after 90 days, you get a full refund of the $1,500 fee. There is no contract to cancel. The guarantee covers the Maps ranking offer only, not ads or lead volume."
+      q: "What happens if you miss the top 3?",
+      a: "You get all $1,500 back. There is no contract to cancel and no paperwork to fight through. The guarantee applies to the Maps ranking offer, so it does not extend to ads or lead volume."
     }
   ]
 };

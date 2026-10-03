@@ -31,13 +31,14 @@ export const metadata: Metadata = {
 };
 export const viewport: Viewport = { themeColor: "#EFEBE5" };
 
-// LocalBusiness schema. NAP comes from site.config.ts (city-level address only: service-area business).
+// ProfessionalService (LocalBusiness subtype) schema. NAP comes from site.config.ts (city-level address only: service-area business).
 const jsonLd: Record<string, unknown> = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "ProfessionalService",
+  "@id": `${siteConfig.url}/#business`,
   name: siteConfig.name,
-  url: siteConfig.url,
-  email: siteConfig.email,
+  description: "Lucros Results is a local marketing agency in Los Angeles. We help local businesses reach the top 3 on Google Maps in 90 days with Google Business Profile optimization, local SEO, Google Ads, Meta Ads and lead generation.",
+  url: `${siteConfig.url}/`,
   telephone: siteConfig.phoneSchema,
   logo: `${siteConfig.url}${siteConfig.logoPath}`,
   image: `${siteConfig.url}${siteConfig.logoPath}`,

@@ -8,7 +8,8 @@ import { SectionHeading } from "./SectionHeading";
 import { SectionWrapper } from "./SectionWrapper";
 
 /** Compact hub block for the homepage and /losangeles: links to all 5 services and all 5 areas. */
-export function ExploreLinks() {
+export function ExploreLinks({ servicesTitle = "Services" }: { servicesTitle?: string }) {
+  const title1 = servicesTitle;
   const col = (title: string, items: { href: string; label: string }[]) => (
     <div>
       <h3 className="text-[24px] tracking-[-0.04em] text-black">{title}</h3>
@@ -27,7 +28,7 @@ export function ExploreLinks() {
       </div>
       <Reveal>
         <Card className="grid gap-10 md:grid-cols-2">
-          {col("Services", services.map((s) => ({ href: serviceHref(s.slug), label: s.name })))}
+          {col(title1, services.map((s) => ({ href: serviceHref(s.slug), label: s.name })))}
           {col("Areas we serve", areas.map((a) => ({ href: areaHref(a.slug), label: a.name })))}
         </Card>
       </Reveal>

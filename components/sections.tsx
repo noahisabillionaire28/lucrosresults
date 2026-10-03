@@ -5,7 +5,9 @@ import { Card } from "./Card";
 import { Chip } from "./Chip";
 import { FAQAccordion } from "./FAQAccordion";
 import { icons } from "./icons";
+import { JsonLd } from "./JsonLd";
 import { PillButton } from "./PillButton";
+import { stripLinks } from "./RichText";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 import { SectionWrapper } from "./SectionWrapper";
@@ -60,8 +62,13 @@ export function ProcessSection() {
 }
 
 export function FAQSection({ items = faqs }: { items?: readonly { q: string; a: string }[] }) {
+  const faqLd = {
+    "@context": "https://schema.org", "@type": "FAQPage",
+    mainEntity: items.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: stripLinks(f.a) } })),
+  };
   return (
     <SectionWrapper reveal={false}>
+      <JsonLd data={faqLd} />
       <div className="mb-10 flex flex-col items-start gap-5 md:mb-14">
         <SectionHeading>Frequently Asked *Questions*</SectionHeading>
       </div>

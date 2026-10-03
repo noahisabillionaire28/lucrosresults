@@ -6,7 +6,7 @@ import { siteConfig } from "@/site.config";
 import { Card } from "./Card";
 import { JsonLd } from "./JsonLd";
 import { Reveal } from "./Reveal";
-import { RichText, stripLinks } from "./RichText";
+import { RichText } from "./RichText";
 import { SectionHeading } from "./SectionHeading";
 import { SectionWrapper } from "./SectionWrapper";
 import { Stack } from "./Stack";
@@ -52,18 +52,13 @@ export function ContentPage({ kind, page }: { kind: "service" | "area"; page: Se
       { "@type": "ListItem", position: 3, name: page.name, item: url },
     ],
   };
-  const faqLd = {
-    "@context": "https://schema.org", "@type": "FAQPage",
-    mainEntity: page.faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: stripLinks(f.a) } })),
-  };
   const serviceLd = isService
-    ? { "@context": "https://schema.org", "@type": "Service", name: page.h1, description: page.description, url, areaServed: siteConfig.areaServed, provider: { "@type": "LocalBusiness", name: siteConfig.name, url: siteConfig.url } }
+    ? { "@context": "https://schema.org", "@type": "Service", name: page.h1, description: page.description, url, areaServed: siteConfig.areaServed, provider: { "@type": "ProfessionalService", "@id": `${siteConfig.url}/#business`, name: siteConfig.name, url: `${siteConfig.url}/` } }
     : null;
 
   return (
     <>
       <JsonLd data={breadcrumb} />
-      <JsonLd data={faqLd} />
       {serviceLd && <JsonLd data={serviceLd} />}
 
       <section className="mx-auto w-full max-w-[1200px] px-6 pb-6 pt-10 md:px-10 lg:px-16 md:pt-16">

@@ -14,7 +14,7 @@ Search the repo for `TODO` to find them all. Main ones:
 
 | What | Where |
 |---|---|
-| Address, phone (display / tel / schema formats), email, domain, tagline, founder, calendar link, map embed, video embeds, founder photo | `site.config.ts` (single source; feeds footer + JSON-LD) |
+| Address, phone (display / tel / schema formats), domain, tagline, founder, calendar link, map embed, video embeds, founder photo | `site.config.ts` (single source; feeds footer + JSON-LD) |
 | Email capture → CRM/email provider (currently redirects to `/thank-you`) | `components/EmailCaptureForm.tsx` |
 | Application form submit (currently shows a thanks message only) | `components/ApplicationForm.tsx` |
 | Calendly event URL (inline embed on /google and /losangeles) | `site.config.ts` → `calendarLink` |

@@ -5,6 +5,7 @@ import { ExploreLinks } from "@/components/ExploreLinks";
 import { EmailCaptureForm } from "@/components/EmailCaptureForm";
 import { UsersIcon } from "@/components/icons";
 import { HomeHero } from "@/components/HomeHero";
+import { NapBlock } from "@/components/NapBlock";
 import { LogoMark } from "@/components/Logo";
 import { LogoStrip } from "@/components/LogoStrip";
 import { Reveal } from "@/components/Reveal";
@@ -70,6 +71,7 @@ export default function Home() {
         </Reveal>
       </SectionWrapper>
 
+      <NapBlock />
       <ExploreLinks />
 
       <SectionWrapper>

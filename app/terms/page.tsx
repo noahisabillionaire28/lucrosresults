@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { SectionWrapper } from "@/components/SectionWrapper";
 
-export const metadata: Metadata = { title: "Terms of Service | Lucros Results", description: "Terms of service for Lucros Results.", alternates: { canonical: "/terms" } };
+export const metadata: Metadata = { title: "Terms of Service | Lucros Results – Marketing Agency Los Angeles", description: "Terms of service for Lucros Results.", alternates: { canonical: "/terms" } };
 
 export default function Terms() {
   return (
