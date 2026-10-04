@@ -22,9 +22,9 @@ export const siteConfig = {
   addressLocality: "Porter Ranch",
   addressRegion: "CA",
   addressCountry: "US",
-  phone: "(818) 903-1753", // display format
-  phoneTel: "+18189031753", // tel: link
-  phoneSchema: "+1-818-903-1753", // JSON-LD
+  phone: "(820) 386-8263", // display format
+  phoneTel: "+18203868263", // tel: link
+  phoneSchema: "+1-820-386-8263", // JSON-LD
 
   // Calendly event, embedded inline on /google and /losangeles. The site redirects to /booked itself
   // when Calendly reports a booking (see components/CalendlyEmbed.tsx).
