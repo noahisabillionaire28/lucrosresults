@@ -85,3 +85,20 @@ Posts are plain files, so adding one takes about five minutes.
 5. **Check it:** `node scripts/check-content.mjs` (800 to 1,200 words, at most 8 links, at least 2 to service or area pages, different anchor text for each link, unique title and description). Then `npm run build`, commit and push to `main`.
 
 Every post automatically gets the "3 Tips to Get Found First on Google" card at the end, Article + breadcrumb schema (author Noah Fernando, publisher Lucros Results with the logo), and a canonical URL.
+
+## Forms and MailerLite (leads)
+
+All forms save to MailerLite through one server route, `app/api/subscribe/route.ts`.
+
+| Form | MailerLite group | Fields sent | After success |
+|---|---|---|---|
+| Homepage hero email form | **3 Tips Opt-In** | email | redirect to `/thank-you` |
+| Homepage "Get My 3 FREE Tips" form (also on every blog post) | **3 Tips Opt-In** | email | redirect to `/thank-you` |
+| `/contact` form | **Leads** | email, name, phone, message | inline thank-you |
+| `/google` application form | **Leads** | email, name, phone, industry, message (the monthly spend answer is added to the message) | inline thank-you |
+
+- **Environment variable:** `MAILERLITE_API_KEY`. It is set in Vercel (Project Settings > Environment Variables); for local work copy `.env.example` to `.env.local` and paste the key. It is only read on the server and never sent to the browser. If it is missing, the site still builds and the forms show a friendly error.
+- **Groups:** the route looks the group IDs up by name (`3 Tips Opt-In`, `Leads`) through the MailerLite API, so create those two groups in MailerLite with exactly those names. If a group is missing, the subscriber is still saved (without a group) and the problem is logged.
+- **Custom fields:** `industry` and `message` are created automatically in MailerLite the first time they are needed. `name` and `phone` are MailerLite's built-in fields.
+- **Spam protection:** every form has a hidden honeypot field (`website`) and the email format is checked in the browser and again on the server.
+- **Change a group or field:** edit `GROUP_NAMES` / `CUSTOM_FIELDS` at the top of `app/api/subscribe/route.ts`.
