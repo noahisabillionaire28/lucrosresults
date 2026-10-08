@@ -13,6 +13,8 @@ export default function ThankYou() {
           <span className="font-semibold">Check Your Inbox</span>
           <span className="font-normal text-black/50"> — Your Video Is On Its Way</span>
         </h1>
+        <p className="mt-8 text-[18px] text-body">Can&apos;t wait? Read the 3 tips now</p>
+        <PillButton href="/free-tips" className="mt-4">Read the 3 Tips</PillButton>
       </section>
       <SectionWrapper>
         <Card className="flex flex-col items-start gap-5 py-12 md:py-20">
