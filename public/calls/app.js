@@ -127,6 +127,9 @@ const FIELDS = {
   city: ['city', 'location', 'area', 'address'],
   industry: ['industry', 'niche', 'category', 'type'],
   notes: ['notes', 'note', 'comments'],
+  // columns written by Export CSV, so an export can be re-imported with sequence progress intact
+  status: ['status'], seqDay: ['seqday', 'sequence day'], nextDate: ['nextdate', 'next date'],
+  lastOutcome: ['lastoutcome', 'last outcome'], lastNote: ['lastnote', 'last note'], lastCalled: ['lastcalled', 'last called'], attempts: ['attempts'],
 };
 const normHead = (h) => h.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 function rowsToLeads(rows) {
@@ -146,20 +149,36 @@ function rowsToLeads(rows) {
     let name = g('name') || [g('first'), g('last')].filter(Boolean).join(' ');
     const company = g('company');
     if (!name) name = company;
-    return { name, company: company === name ? '' : company, phone: g('phone'), email: g('email'), website: g('website'), city: g('city'), industry: g('industry'), notes: g('notes'), extra };
+    const lead = { name, company: company === name ? '' : company, phone: g('phone'), email: g('email'), website: g('website'), city: g('city'), industry: g('industry'), notes: g('notes'), extra };
+    const status = g('status');
+    if (['new', 'active', 'done', 'won', 'lost'].includes(status)) {
+      const day = Number(g('seqDay'));
+      lead.restore = { status, seqDay: STEPS.includes(day) ? day : null, nextDate: /^\d{4}-\d{2}-\d{2}$/.test(g('nextDate')) ? g('nextDate') : null,
+        lastOutcome: Object.keys(OUTCOMES).find((k) => OUTCOMES[k] === g('lastOutcome')), lastNote: g('lastNote'), lastCalled: g('lastCalled') };
+      if (status === 'active' && !lead.restore.nextDate) lead.restore.nextDate = today();
+    }
+    return lead;
   }).filter((l) => l.name || l.phone);
 }
 const leadKey = (l) => { const d = (l.phone || '').replace(/\D/g, '').slice(-10); return d.length >= 7 ? 'p' + d : 'n' + (l.name + '|' + l.company).toLowerCase(); };
 function mergeLeads(incoming, source) {
   const map = new Map(state.leads.map((l) => [leadKey(l), l]));
   let added = 0, updated = 0;
-  for (const n of incoming) {
+  for (const { restore, ...n } of incoming) {
     const ex = map.get(leadKey(n));
     if (ex) { for (const k of ['name', 'company', 'phone', 'email', 'website', 'city', 'industry']) if (n[k]) ex[k] = n[k]; ex.extra = Object.assign(ex.extra || {}, n.extra); updated++; }
     else { const l = Object.assign({ id: uid(), status: 'new', seqDay: null, seqStart: null, nextDate: null, log: [], source, createdAt: today() }, n); state.leads.push(l); map.set(leadKey(l), l); added++; }
+    if (restore) applyRestore(map.get(leadKey(n)), restore);
   }
   save(); render();
   return { added, updated };
+}
+function applyRestore(l, r) {
+  Object.assign(l, { status: r.status, seqDay: r.seqDay, nextDate: r.status === 'active' ? r.nextDate : null, seqStart: l.seqStart || (r.seqDay ? today() : null) });
+  if (r.lastOutcome && !(l.log || []).length) {
+    const at = /^\d{4}-\d{2}-\d{2}$/.test(r.lastCalled) ? new Date(r.lastCalled + 'T12:00:00').toISOString() : new Date().toISOString();
+    l.log = [{ at, day: r.seqDay, outcome: r.lastOutcome, note: r.lastNote || '' }];
+  }
 }
 function sheetCsvUrl(url) {
   if (/output=csv|tqx=out:csv|format=csv/.test(url)) return url;
@@ -339,7 +358,7 @@ function renderSetup() {
     <div style="height:8px"></div>
     <select id="model">${[['claude-haiku-5-5', 'Fast (Haiku)'], ['claude-sonnet-5-5', 'Smarter (Sonnet)']].map(([v, l]) => `<option value="${v}" ${(s.model || 'claude-haiku-5-5') === v ? 'selected' : ''}>${l}</option>`).join('')}</select>
     <div class="btnrow"><button class="btn primary" id="saveSettings">Save</button></div></div>
-  <div class="card"><h3>Data</h3><p>${state.leads.length} leads on this device. Export to paste results back into your sheet.</p>
+  <div class="card"><h3>Data</h3><p>${state.leads.length} leads saved on this device at this web address. Export a backup weekly. Moving devices or links: Export CSV here, then Upload CSV there — sequence progress comes with it.</p>
     <div class="btnrow"><button class="btn" id="exportBtn">Export CSV</button><button class="btn" id="sampleBtn">Load sample</button></div>
     <div class="btnrow"><button class="btn bad" id="clearBtn">Delete all leads</button></div></div>
   <div class="card"><h3>Add to iPhone home screen</h3><p>Open this page in Safari → Share → <b>Add to Home Screen</b>.</p></div>`;
@@ -570,6 +589,7 @@ function loadSample() {
   save(); ui.tab = 'queue'; render(); toast('Sample leads loaded');
 }
 
+try { navigator.storage && navigator.storage.persist && navigator.storage.persist(); } catch (e) {}
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('/calls/sw.js', { scope: '/calls' }).catch(() => {});
 render();
 
