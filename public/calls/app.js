@@ -365,7 +365,10 @@ function renderSheet() {
     <div class="btnrow">
       ${phone ? `<a class="btn ok" href="tel:${esc(phone)}" data-call="${l.id}">✆ Call ${esc(l.phone)}</a><a class="btn" href="sms:${esc(phone)}">Text</a>` : '<span class="kv">No phone number</span>'}
     </div>
-    ${l.status === 'new' || l.status === 'done' || l.status === 'lost' ? `<div class="btnrow"><button class="btn primary" data-act="start">${l.status === 'new' ? 'Add to sequence' : 'Restart sequence'}</button></div>` : ''}
+    <div class="btnrow">
+      ${l.status === 'active' ? '' : `<button class="btn primary" data-act="start">${l.status === 'new' ? 'Add to sequence' : 'Restart sequence'} & next →</button>`}
+      <button class="btn bad" data-act="delete">Delete & next →</button>
+    </div>
 
     <div class="label">Script for this step</div>
     <div class="sug"><b>Day ${l.seqDay || 1}</b>${esc(DAY_TIPS[l.seqDay || 1](l))}</div>
@@ -389,12 +392,20 @@ function renderSheet() {
     <p class="hint">No answer / voicemail / follow-up moves them to the next day (1 → 3 → 5 → 7). The note above is saved with the call.</p>` : ''}
 
     ${(l.log || []).length ? `<div class="label">History</div>${l.log.slice().reverse().map((x) => `<div class="log">${fmtDate(isoDate(new Date(x.at)))} · Day ${x.day ?? '-'} · ${esc(OUTCOMES[x.outcome] || x.outcome)}${x.note ? ' — ' + esc(x.note) : ''}</div>`).join('')}` : ''}
-    <div class="btnrow"><button class="btn bad" data-act="delete">Delete lead</button><button class="btn" data-act="close">Close</button></div>`;
+    <div class="btnrow"><button class="btn bad" data-act="delete">Delete & next →</button><button class="btn" data-act="close">Close</button></div>`;
   showSuggestions(draft);
 }
 function showSuggestions(text) {
   const box = $('#sugs'); if (!box) return;
   box.innerHTML = suggest(text).map((r) => `<div class="sug"><b>${esc(r.t)}</b>${r.s.map(esc).join('<br>')}<div class="kv" style="margin-top:4px">💡 ${esc(r.tip)}</div></div>`).join('');
+}
+// "& next" flow: remember list order before the action, then open the following lead still on screen.
+const listOrder = () => [...main.querySelectorAll('li.swipe')].map((li) => li.dataset.id);
+function openNext(ids, id) {
+  const i = ids.indexOf(id);
+  const visible = new Set(listOrder());
+  const next = ids.slice(i + 1).concat(ids.slice(0, Math.max(i, 0))).find((x) => x !== id && visible.has(x));
+  if (next) openSheet(next); else closeSheet();
 }
 function openSheet(id) { ui.openId = id; $('#sheet').innerHTML = ''; renderSheet(); $('#sheetWrap').classList.add('open'); $('#sheet').scrollTop = 0; }
 function closeSheet() { ui.openId = null; $('#sheetWrap').classList.remove('open'); }
@@ -475,7 +486,8 @@ document.addEventListener('click', (e) => {
     const l = byId(ui.openId); if (!l) return;
     const note = $('#said')?.value.trim();
     logOutcome(l, out.dataset.out, note, $('#cbDate')?.value);
-    save(); closeSheet(); render();
+    const ids = listOrder();
+    save(); render(); openNext(ids, l.id);
     toast(`${l.name}: ${OUTCOMES[out.dataset.out]}${l.status === 'active' ? ` · next ${fmtDate(l.nextDate)}` : ''}`);
     return;
   }
@@ -483,8 +495,8 @@ document.addEventListener('click', (e) => {
   if (act) {
     const l = byId(ui.openId);
     if (act.dataset.act === 'close') closeSheet();
-    else if (act.dataset.act === 'delete' && l) { closeSheet(); deleteLead(l.id); }
-    else if (act.dataset.act === 'start' && l) { startSequence(l); save(); render(); toast(`${l.name} added — Day 1 due today`); }
+    else if (act.dataset.act === 'delete' && l) { const ids = listOrder(); deleteLead(l.id); openNext(ids, l.id); }
+    else if (act.dataset.act === 'start' && l) { const ids = listOrder(); startSequence(l); save(); render(); openNext(ids, l.id); toast(`${l.name} added — Day 1 due today`); }
     return;
   }
   if (e.target.id === 'aiBtn') { runAI(); return; }
